@@ -10,7 +10,7 @@ The Ambulance Scheduler allows users to:
 - Manage ambulance resources
 - Run a scheduling algorithm to assign jobs to available ambulances
 
-The system is designed to simulate real-world dispatch scenarios and will be extended with optimisation logic.
+The system is designed to simulate real-world dispatch scenarios.
 
 The dataset used for the application was synthetically created using patterns derived from NHS Ambulance Quality indicator data.
 The source data provides operational statistics rather than record level incidents so a job-level dataset was created to simulate 
