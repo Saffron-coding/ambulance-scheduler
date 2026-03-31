@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div style="max-width: 900px; margin: 40px auto;">
+
+    <h1>Ambulance Scheduler</h1>
+
+    <p>
+        The Ambulance Scheduler is a web application designed to manage ambulance
+        jobs efficiently. Users can create, view, update, and delete ambulance job
+        records through a simple and intuitive interface.
+    </p>
+
+    <p>
+        The system provides a structured way to store and manage job data such as
+        location, category (priority), timing, and outcomes.
+    </p>
+
+    <p>
+        This application further includes a scheduling and optimisation
+        engine, which will automatically assign ambulances to jobs based on
+        availability, priority, and timing constraints.
+    </p>
+
+    <h3>Navigate the system</h3>
+
+    <div style="margin-top: 20px;">
+        <p>
+            <a href="{{ url_for('main.jobs') }}">View Jobs</a> — view all ambulance jobs currently stored in the system.
+        </p>
+        <p>
+            <a href="{{ url_for('main.add_job') }}">Create Job</a> — add a new ambulance job to the system.
+        </p>
+        <p>
+            <a href="{{ url_for('main.schedule') }}">View Scheduled Jobs</a> — View all scheduled and awaiting jobs.
+        </p>
+        <p>
+    <a href="{{ url_for('main.ambulances') }}">View Ambulances</a> — see all ambulances currently available in the system.
+        </p>
+        <p>
+    <a href="{{ url_for('main.add_ambulance') }}">Create Ambulance</a> — add a new ambulance resource for scheduling.
+        </p>
+    </div>
+
+</div>
+
+{% endblock %}

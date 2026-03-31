@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>All Ambulance Jobs</h1>
+
+
+<div style="display: flex; justify-content: flex-end; margin-bottom: 15px;">
+    <a href="{{ url_for('main.add_job') }}">Create Job</a>
+    <a href="{{ url_for('main.schedule') }}">View Schedule</a>
+
+
+
+</div>
+<div class="card">
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>Job ID</th>
+                <th>Category</th>
+                <th>Location</th>
+                <th>Response Minutes</th>
+                <th>Outcome</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for job in jobs %}
+            <tr>
+                <td>{{ job.job_id }}</td>
+                <td>{{ job.category }}</td>
+                <td>{{ job.location }}</td>
+                <td>{{ job.response_minutes }}</td>
+                <td>{{ job.outcome }}</td>
+                <td>
+    <a href="{{ url_for('main.edit_job', id=job.id) }}">Update</a>
+
+    <form action="{{ url_for('main.delete_job', id=job.id) }}" method="POST" style="display:inline;">
+        <button type="submit">Delete</button>
+    </form>
+</td>
+                <td>
+                    <span class="status
+                        {% if job.outcome == 'Hear & Treat' %}hear-treat
+                        {% elif job.outcome == 'See & Treat' %}see-treat
+                        {% elif job.outcome == 'Convey to ED' %}convey-ed
+                        {% endif %}">
+                        {{ job.outcome }}
+                    </span>
+                </td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}
