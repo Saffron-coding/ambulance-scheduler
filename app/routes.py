@@ -2,7 +2,6 @@ from __future__ import annotations
 from datetime import timedelta, datetime
 import uuid
 from flask import Blueprint, render_template, request, redirect, url_for, flash, session, current_app
-from sqlalchemy.exc import IntegrityError
 from app import db
 from app.models import Job, Ambulance
 from app.forms import JobForm, AmbulanceForm
@@ -91,7 +90,7 @@ def add_ambulance():
         db.session.commit()
         flash('Ambulance added successfully')
         return redirect(url_for('main.ambulances'))
-    return render_template('create_ambulance.html', form=form)
+    return render_template('ambulance.html', form=form)
 
 @main_bp.route('/schedule')
 def schedule():
