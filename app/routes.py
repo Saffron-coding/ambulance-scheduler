@@ -6,6 +6,7 @@ from app import db
 from app.models import Job, Ambulance
 from app.forms import JobForm, AmbulanceForm
 from app.scheduler import run_scheduler
+from app.utlis.locations import Locations
 
 main_bp = Blueprint('main', __name__)
 
@@ -21,26 +22,32 @@ def jobs():
 @main_bp.route('/jobs/add', methods=['GET', 'POST'])
 def add_job():
     form = JobForm()
-
+#review with supervisor if users should add less fields to form
     if form.validate_on_submit():
+        location_name = form.location.data
+        lat, lng = Locations[location_name]
         job = Job(
-            job_id=str(uuid.uuid4()),  # quick unique id
+            incident_name = form.incident_name.data,
             location=form.location.data,
+            latitude = lat,
+            longitude = lng,
             category=form.category.data,
-            call_time=str(form.call_time.data),
+            call_time=datetime(form.call_time.data),
             dispatch_time="",
             arrival_time="",
             clear_time="",
             response_minutes=0.0,
             service_minutes=0.0,
             total_job_minutes=form.total_job_minutes.data,
-            outcome=form.outcome.data
+            outcome=form.outcome.data,
+            medical_history= form.medical_history.data,
+            patient_notes= form.patient_notes.data
         )
 
         db.session.add(job)
         db.session.commit()
 
-        flash('You have successfully added an ambulance job')
+        flash('You have successfully triaged an ambulance job')
         return redirect(url_for('main.jobs'))
 
     return render_template('create_job.html', form=form)

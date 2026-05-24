@@ -29,6 +29,7 @@ def run_scheduler(jobs, ambulances):
             "ambulance": ambulance,
             "available_from": parse_time(ambulance.available_from)
         })
+#call haversine formula to decide which ambulance goes to which job based on distance
 
     # Process each job in order
     for job in sorted_jobs:
@@ -43,7 +44,8 @@ def run_scheduler(jobs, ambulances):
                     "job": job,
                     "ambulance": state["ambulance"],
                     "assigned_start": job_start,
-                    "assigned_end": job_start + job_duration
+                    "assigned_end": job_start + job_duration,
+                    #"eta_minutes": eta_minutes
                 })
 
                 state["available_from"] = job_start + job_duration
