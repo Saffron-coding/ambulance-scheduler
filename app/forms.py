@@ -1,5 +1,4 @@
 from random import choices
-
 from wtforms.validators import DataRequired, Length, NumberRange
 from wtforms import SubmitField, SelectField, DateTimeField, DecimalField, DateTimeLocalField,FloatField, TextAreaField
 from wtforms.fields.numeric import IntegerField
@@ -42,6 +41,7 @@ class JobForm(FlaskForm):
     incident_name = StringField("Incident Name", validators=[DataRequired()])
     patient_notes = TextAreaField("Patient Note", validators=[DataRequired()])
     medical_history = TextAreaField("Patient Note", validators=[DataRequired()])
+    patient_age = IntegerField("Patient Age", validators=[DataRequired()])
 
 
     submit = SubmitField("Add Ambulance Job")

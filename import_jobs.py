@@ -1,32 +1,40 @@
 import csv
 from app import create_app, db
 from app.models import Job
+from datetime import datetime
+from app.routes import escalate_priority
+from app.utlis.locations import Locations
 
 app = create_app()
 
 def import_csv():
     with app.app_context():
-        with open("data/ambulance_jobs_synthetic_150.csv", newline="", encoding="utf-8") as csvfile:
+        with open("data/ambulance_jobs.csv", newline="", encoding="utf-8") as csvfile:
             reader = csv.DictReader(csvfile)
-
             for row in reader:
-                existing_job = Job.query.filter_by(job_id=row["job_id"]).first()
-                if existing_job:
-                    continue
+                location_name = row['location']
+                lat, lng = Locations[location_name]
 
-                job = Job(
-                    job_id=row["job_id"],
-                    category=row["category"],
-                    call_time=row["call_time"],
-                    dispatch_time=row["dispatch_time"],
-                    arrival_time=row["arrival_time"],
-                    clear_time=row["clear_time"],
-                    response_minutes=float(row["response_minutes"]),
-                    service_minutes=float(row["service_minutes"]),
-                    total_job_minutes=float(row["total_job_minutes"]),
-                    location=row["location"],
-                    outcome=row["outcome"]
+                escalated_category = escalate_priority(
+                    row['user_assigned_category'],
+                    row['incident_name'],
+                    row['medical_history'],
+                    row['patient_notes'],
+                    int(row['patient_age']),
                 )
+                job = Job(
+                        incident_name=row["incident_name"],
+                        location=row["location"],
+                        lat=lat,
+                        lon=lng,
+                        user_assigned_category=row["user_assigned_category"],
+                        system_assigned_category=escalated_category,
+                        call_time= datetime.strptime(row["call_time"],"%Y-%m-%d %H:%M:%S.%f"),
+                        time=datetime.strptime(row["time"],"%Y-%m-%d %H:%M:%S.%f"),
+                        patient_age=int(row["patient_age"]),
+                        medical_history=row["medical_history"],
+                        patient_notes=row["patient_notes"]
+                    )
 
                 db.session.add(job)
 

@@ -7,6 +7,7 @@ from app.models import Job, Ambulance
 from app.forms import JobForm, AmbulanceForm
 from app.scheduler import run_scheduler
 from app.utlis.locations import Locations
+from app.escalate import escalate_priority
 
 main_bp = Blueprint('main', __name__)
 
@@ -22,26 +23,30 @@ def jobs():
 @main_bp.route('/jobs/add', methods=['GET', 'POST'])
 def add_job():
     form = JobForm()
-#review with supervisor if users should add less fields to form
+#review with supervisor if users should reduce fields to form
     if form.validate_on_submit():
         location_name = form.location.data
         lat, lng = Locations[location_name]
+        new_category = escalate_priority(
+            form.category.data,
+            form.incident_name.data,
+            form.medical_history.data,
+            form.patient_notes.data,
+            form.patient_age.data
+        )
+
         job = Job(
             incident_name = form.incident_name.data,
             location=form.location.data,
             latitude = lat,
             longitude = lng,
-            category=form.category.data,
-            call_time=datetime(form.call_time.data),
-            dispatch_time="",
-            arrival_time="",
-            clear_time="",
-            response_minutes=0.0,
-            service_minutes=0.0,
-            total_job_minutes=form.total_job_minutes.data,
-            outcome=form.outcome.data,
+            user_assigned_category=form.category.data,
+            system_assigned_category = new_category,
+            call_time=form.call_time.data,
             medical_history= form.medical_history.data,
-            patient_notes= form.patient_notes.data
+            patient_notes= form.patient_notes.data,
+            patient_age= form.patient_age.data
+
         )
 
         db.session.add(job)
@@ -103,7 +108,7 @@ def add_ambulance():
 def schedule():
     jobs = Job.query.all()
     ambulances = Ambulance.query.all()
-    print(ambulances)
+
 
     scheduled_jobs, unscheduled_jobs = run_scheduler(jobs, ambulances)
 

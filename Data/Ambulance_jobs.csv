@@ -1,0 +1,51 @@
+incident_name,user_assigned_category,system_assigned_category,call_time,time,location,lat,lon,patient_age,patient_notes,medical_history
+Mental health crisis,C3,Pending,2026-04-03 14:29:52.148391,2026-01-04 14:55:53.502488,Pype Hayes,52.5154936,-1.8067531,66,Hypertension in a 58-year-old male,Hyperthyroidism
+concussion,C2,Pending,2026-02-09 19:56:15.028628,2026-02-02 07:49:41.726247,Handsworth Wood,52.5146621,-1.9189267,64,20 year seziure patient recorded history of eplipsy,Epilepsy
+cardiac arrest,C2,Pending,2026-04-17 15:48:05.340329,2026-04-09 00:02:56.248147,Erdington,52.5209379,-1.8582057,47,no feeling in legs high fever and numbness in hands,Alzheimer’s Disease
+concussion,C2,Pending,2026-05-10 05:00:26.131056,2026-01-13 14:10:44.486556,Kingstanding,52.5499565,-1.8860854,47,diagnosed with anyeresm 10 years ago crushing chest pain,Peptic Ulcer Disease
+labour pains,C1,Pending,2026-03-03 02:30:05.202720,2026-01-05 07:34:05.366104,Perry Barr,52.5240612,-1.9233802,64,Type 2 diabetes mellitus in a 62-year-old female light headed ,Generalised Anxiety Disorder
+fall,C4,Pending,2026-02-01 15:56:03.849690,2026-03-15 04:29:47.918702,Bournville,52.4247354,-1.9470034,52,severe burns accident with boiling ater patient by themselves,Breast Cancer
+dizziness,C3,Pending,2026-01-04 20:13:58.140414,2026-01-29 19:06:47.205493,Erdington,52.5209379,-1.8582057,39,"Anxiety disorder having a panic attack,suicidal thoughts",Parkinson’s Disease
+asthma attack,C2,Pending,2026-04-05 02:50:46.048017,2026-03-20 22:05:20.326008,Longbridge,52.3911472,-1.985527,77,labour pain in female 8 months pregnant,Stroke
+alcohol poisoning,C3,Pending,2026-02-01 22:11:59.936524,2026-03-27 08:08:58.310778,Northfield,52.4082271,-1.9729107,59,no feeling in legs high fever and numbness in hands,Sepsis
+fall,C2,Pending,2026-04-28 05:23:26.612809,2026-01-01 22:35:17.400653,Bartley Green,52.4352714,-2.0008842,22,hard fall 28 patient complaining of possible arm break,Peptic Ulcer Disease
+respiratory failure,C3,Pending,2026-04-27 16:50:20.484106,2026-04-12 02:34:08.601615,Perry Barr,52.5240612,-1.9233802,45,20 year seziure patient recorded history of eplipsy,Cirrhosis
+fall,C2,Pending,2026-02-19 06:37:52.032314,2026-01-23 12:24:37.199626,Great Barr,52.5483541,-1.9422477,81,labour pain in female 8 months pregnant,Pulmonary Embolism
+asthma attack,C2,Pending,2026-05-19 15:02:54.569747,2026-02-18 17:55:25.750520,Four Oaks,52.5864368,-1.8420917,51,treated with amlodipine and atorvastatin possible overdose,Chronic Kidney Disease
+unresponsive patient,C1,Pending,2026-01-14 10:21:46.200976,2026-01-15 00:09:48.521238,Rubery,52.3978566,-2.0391376,72,20 year seziure patient recorded history of eplipsy,Peptic Ulcer Disease
+fall,C3,Pending,2026-05-03 17:41:31.064975,2026-03-29 10:24:37.125068,Stirchley,52.4286323,-1.9271269,35,"Asthma attack, no inhaler struggling to breathe losing consciouness",Obesity
+seizure,C3,Pending,2026-04-27 21:23:19.951312,2026-04-16 16:22:36.522076,Kingstanding,52.5499565,-1.8860854,24,diagnosed with anyeresm 10 years ago crushing chest pain,Coronary Artery Disease
+seizure,C2,Pending,2026-03-19 15:48:11.804946,2026-05-21 22:19:21.087543,Hall Green,52.4351006,-1.8567589,72,Collapsed in a gym unresponsive,Asthma
+stomach pain,C2,Pending,2026-02-24 19:41:48.678154,2026-03-21 22:45:50.273248,Selly Park,52.4418313,-1.928077,77,"Asthma attack, no inhaler struggling to breathe losing consciouness",Stroke
+alcohol poisoning,C3,Pending,2026-05-01 02:48:59.018464,2026-03-31 13:49:47.361034,Edgbaston,52.4612105,-1.9290562,32,"high fever, cold, abdominal pain numbness in hands",Hyperthyroidism
+seizure,C1,Pending,2026-05-05 19:05:29.048812,2026-03-25 14:44:27.097027,Perry Barr,52.5240612,-1.9233802,61,diagnosed with anyeresm 10 years ago crushing chest pain,Alzheimer’s Disease
+asthma attack,C4,Pending,2026-04-13 00:55:36.175601,2026-01-07 15:16:29.377358,Sheldon,52.4523168,-1.7852712,76,patient found on the floor unconscious,Parkinson’s Disease
+stroke,C2,Pending,2026-02-03 00:07:15.743947,2026-02-11 21:50:41.267278,Rubery,52.3978566,-2.0391376,40,"Asthma attack, no inhaler struggling to breathe losing consciouness",Chronic Obstructive Pulmonary Disease
+concussion,C3,Pending,2026-01-12 13:20:17.617795,2026-02-03 17:07:35.792850,Oscott,52.5468724,-1.8631238,82,Collapsed in a gym unresponsive,Epilepsy
+chest pain,C4,Pending,2026-01-15 15:03:26.342857,2026-02-10 06:10:16.148131,Sparkhill,52.4494221,-1.8733977,38,"Anxiety disorder having a panic attack,suicidal thoughts",Sepsis
+dizziness,C4,Pending,2026-04-03 01:29:24.979760,2026-02-22 20:04:16.401233,Edgbaston,52.4612105,-1.9290562,59,abdominal pain and vomiting possible alcohol poisoning,Hypertension
+Mental health crisis,C3,Pending,2026-02-23 14:39:44.487559,2026-01-31 08:11:50.565835,Pype Hayes,52.5154936,-1.8067531,64,patient has numbness on right side of arm crush pain possible heart attack,Chronic Kidney Disease
+fall,C3,Pending,2026-02-08 15:57:08.611690,2026-05-16 15:35:31.248982,Bartley Green,52.4352714,-2.0008842,90,Hypertension in a 58-year-old male,Asthma
+concussion,C2,Pending,2026-04-04 20:25:09.302992,2026-03-30 05:11:48.255077,Walmley,52.5400558,-1.801568,26,no feeling in legs high fever and numbness in hands,Hyperthyroidism
+asthma attack,C2,Pending,2026-01-25 18:50:16.318211,2026-04-16 14:16:26.444941,Moseley,52.445684,-1.8848314,78,"Anxiety disorder having a panic attack,suicidal thoughts",Atrial Fibrillation
+stroke,C4,Pending,2026-01-24 15:56:55.697637,2026-02-24 22:53:53.735041,Rubery,52.3978566,-2.0391376,72,Moderate persistent asthma in a 25-year-old male triggered by exercise,Hyperthyroidism
+unresponsive patient,C4,Pending,2026-05-24 07:21:05.232342,2026-04-03 16:29:21.475113,Jewellery Quarter,52.4870169,-1.9203616,57,labour pain in female 8 months pregnant,Breast Cancer
+labour pains,C3,Pending,2026-03-22 15:49:36.805064,2026-04-10 03:33:31.761373,Stirchley,52.4286323,-1.9271269,84,cough blood 85 year old man,Chronic Obstructive Pulmonary Disease
+fall,C3,Pending,2026-05-03 01:33:21.264318,2026-04-23 09:11:38.325200,Longbridge,52.3911472,-1.985527,26,hard fall 28 patient complaining of possible arm break,Hypertension
+dizziness,C4,Pending,2026-02-03 04:07:02.865805,2026-01-05 15:34:22.551612,Northfield,52.4082271,-1.9729107,46,patient found on the floor unconscious,Asthma
+fall,C2,Pending,2026-02-15 16:26:27.335273,2026-02-08 18:36:16.520051,Bartley Green,52.4352714,-2.0008842,26,patient not breathing,Major Depressive Disorder
+stroke,C4,Pending,2026-01-31 13:19:37.052965,2026-05-17 13:20:00.128414,Erdington,52.5209379,-1.8582057,48,Coronary artery disease in a 65-year-old male,Breast Cancer
+fall,C4,Pending,2026-05-07 22:02:55.152719,2026-02-15 13:44:47.855706,Walmley,52.5400558,-1.801568,87,treated with amlodipine and atorvastatin possible overdose,Parkinson’s Disease
+fall,C1,Pending,2026-04-05 22:09:04.747239,2026-02-27 07:07:25.839420,Roughley,52.5913569,-1.8193277,78,slurring words unable to communicate possible stroke,Epilepsy
+respiratory failure,C3,Pending,2026-05-13 10:45:11.755359,2026-03-08 10:51:41.730426,Castle Vale,52.5154628,-1.7913034,73,witness states patient is unable to breath,Rheumatoid Arthritis
+labour pains,C3,Pending,2026-02-08 08:39:41.157510,2026-02-05 17:13:10.073290,Acocks Green,52.4464227,-1.8333938,24,"high fever, cold, abdominal pain numbness in hands",Pulmonary Embolism
+cardiac arrest,C2,Pending,2026-03-23 07:11:03.050327,2026-02-08 01:13:41.901237,Castle Vale,52.5154628,-1.7913034,69,"stabbing pain in stomach,cannot move",Major Depressive Disorder
+fall,C3,Pending,2026-03-26 15:53:02.441272,2026-05-11 00:37:19.571557,Castle Vale,52.5154628,-1.7913034,42,Moderate persistent asthma in a 25-year-old male triggered by exercise,Hyperthyroidism
+asthma attack,C2,Pending,2026-02-27 20:13:21.466499,2026-02-01 18:18:27.364391,South Yardley,52.461949,-1.8282055,72,Type 2 diabetes mellitus in a 62-year-old female light headed ,Stroke
+fall,C2,Pending,2026-05-25 11:12:25.668435,2026-03-15 18:59:38.697884,Four Oaks,52.5864368,-1.8420917,27,cough blood 85 year old man,Hyperthyroidism
+cardiac arrest,C2,Pending,2026-01-14 03:58:47.383543,2026-01-07 19:45:55.756410,Castle Vale,52.5154628,-1.7913034,87,patient found on the floor unconscious,Asthma
+asthma attack,C2,Pending,2026-01-16 21:06:52.923339,2026-04-01 20:51:19.850443,Longbridge,52.3911472,-1.985527,70,abdominal pain and vomiting possible alcohol poisoning,Obesity
+concussion,C2,Pending,2026-04-25 17:04:56.610988,2026-03-03 03:19:45.079693,Newtown,52.4965335,-1.9363753,69,patient not breathing,Atrial Fibrillation
+cardiac arrest,C1,Pending,2026-01-10 04:48:26.749847,2026-02-25 06:25:09.398570,Selly Park,52.4418313,-1.928077,67,Coronary artery disease in a 65-year-old male,Cardiac arrest
+stomach pain,C2,Pending,2026-05-25 06:17:04.773449,2026-03-18 15:04:39.225440,Handsworth Wood,52.5146621,-1.9189267,89,"high fever, cold, abdominal pain numbness in hands",Cirrhosis
+asthma attack,C4,Pending,2026-05-21 15:14:27.767033,2026-05-05 15:52:07.244593,Walmley,52.5400558,-1.801568,42,patient has numbness on right side of arm crush pain possible heart attack,Epilepsy
