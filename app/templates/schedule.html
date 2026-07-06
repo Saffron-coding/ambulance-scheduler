@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Scheduling Results</h1>
+
+<div style="width: 500px; margin-bottom: 30px;">
+    <canvas id="scheduleChart"></canvas>
+</div>
+
+<h2>Scheduled Jobs</h2>
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>Job ID</th>
+            <th>Category</th>
+            <th>Ambulance</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in scheduled_jobs %}
+        <tr>
+            <td>{{ item.job.job_id }}</td>
+            <td>{{ item.job.category }}</td>
+            <td>{{ item.ambulance.ambulance_id }}</td>
+            <td>{{ item.assigned_start.strftime('%Y-%m-%d %H:%M') }}</td>
+            <td>{{ item.assigned_end.strftime('%Y-%m-%d %H:%M') }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<br>
+
+<h2>Unscheduled Jobs</h2>
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>Job ID</th>
+            <th>Category</th>
+            <th>Location</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for job in unscheduled_jobs %}
+        <tr>
+            <td>{{ job.job_id }}</td>
+            <td>{{ job.category }}</td>
+            <td>{{ job.location }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const ctx = document.getElementById('scheduleChart');
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Scheduled Jobs', 'Unscheduled Jobs'],
+            datasets: [{
+                label: 'Number of Jobs',
+                data: [{{ scheduled_jobs|length }}, {{ unscheduled_jobs|length }}],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        precision: 0
+                    }
+                }
+            }
+        }
+    });
+</script>
+
+{% endblock %}

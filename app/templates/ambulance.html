@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Create Ambulance</h2>
+
+<form method="POST">
+    {{ form.hidden_tag() }}
+
+    <p>
+        {{ form.name.label }}<br>
+        {{ form.name(class="form-control") }}
+    </p>
+
+    <p>
+        {{ form.location.label }}<br>
+        {{ form.location(class="form-control") }}
+    </p>
+
+    <p>
+        {{ form.available_from.label }}<br>
+        {{ form.available_from(class="form-control") }}
+    </p>
+
+    <p>
+        {{ form.submit() }}
+    </p>
+</form>
+
+{% endblock %}

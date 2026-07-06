@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Edit Job</h2>
+
+<form method="POST">
+    {{ form.hidden_tag() }}
+
+    <div>
+        {{ form.location.label }}
+        {{ form.location(class="form-control") }}
+    </div>
+
+    <div>
+        {{ form.category.label }}
+        {{ form.category(class="form-control") }}
+    </div>
+
+    <div>
+        {{ form.call_time.label }}
+        {{ form.call_time(class="form-control") }}
+    </div>
+
+    <div>
+        {{ form.total_job_minutes.label }}
+        {{ form.total_job_minutes(class="form-control") }}
+    </div>
+
+    <div>
+        {{ form.outcome.label }}
+        {{ form.outcome(class="form-control") }}
+    </div>
+
+    <br>
+
+    {{ form.submit(class="btn btn-primary") }}
+
+</form>
+
+{% endblock %}

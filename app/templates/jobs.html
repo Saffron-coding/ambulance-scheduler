@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>All Ambulance Jobs</h1>
+
+
+<div style="display: flex; justify-content: flex-end; margin-bottom: 15px;">
+    <a href="{{ url_for('main.add_job') }}">Create Job</a>
+    <a href="{{ url_for('main.schedule') }}">View Schedule</a>
+
+
+
+</div>
+<div class="card">
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>Incident name</th>
+                <th>Category</th>
+                <th>Location</th>
+                <th>Call time</th>
+                <th>Patient notes</th>
+                <th>medical history</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for job in jobs %}
+            <tr>
+                <td>{{ job.incident_name }}</td>
+                <td>{{ job.system_assigned_category }}</td>
+                <td>{{ job.location }}</td>
+                <td>{{ job.call_time }}</td>
+                <td>{{ job.patient_notes }}</td>
+                <td>{{ job.medical_history }}</td>
+                <td>
+    <a href="{{ url_for('main.edit_job', id=job.job_id) }}">Update</a>
+
+    <form action="{{ url_for('main.delete_job', id=job.job_id) }}" method="POST" style="display:inline;">
+        <button type="submit">Delete</button>
+    </form>
+</td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

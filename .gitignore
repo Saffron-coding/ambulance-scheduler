@@ -1,0 +1,7 @@
+.venv/
+.env
+__pycache__/
+*.pyc
+instance/
+cache/route_cache.json
+.DS_Store
