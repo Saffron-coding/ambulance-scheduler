@@ -1,23 +1,25 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from dotenv import load_dotenv
-load_dotenv()
+from flask_migrate import Migrate
+from config import Config
 
 db = SQLAlchemy()
+migrate = Migrate()
 
-def create_app():
+def create_app(config_class=Config):
     app = Flask(__name__)
-
-    # Basic config
-    app.config['SECRET_KEY'] = 'your_secret_key_here'
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
+    app.config.from_object(config_class)
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-    # Initialise database
+    # Initialise extensions
     db.init_app(app)
+    migrate.init_app(app, db)
 
     # Import and register routes
     from app.routes import main_bp
     app.register_blueprint(main_bp)
+
+    # Import models so Alembic can see them
+    from app import models
 
     return app

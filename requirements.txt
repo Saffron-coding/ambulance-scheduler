@@ -1,3 +1,4 @@
+flask-migrate
 python-dotenv
 requests
 faker

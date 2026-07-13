@@ -24,25 +24,17 @@
         </div>
 
         <div class="mb-3">
-            {{ form.total_job_minutes.label(class="form-label") }}
-            {{ form.total_job_minutes(class="form-control") }}
-            {% for error in form.total_job_minutes.errors %}
+            {{ form.estimated_job_time.label(class="form-label") }}
+            {{ form.estimated_job_time(class="form-control") }}
+            {% for error in form.estimated_job_time.errors %}
                 <div class="text-danger">{{ error }}</div>
             {% endfor %}
         </div>
 
         <div class="mb-3">
-            {{ form.category.label(class="form-label") }}
-            {{ form.category(class="form-control") }}
-            {% for error in form.category.errors %}
-                <div class="text-danger">{{ error }}</div>
-            {% endfor %}
-        </div>
-
-        <div class="mb-3">
-            {{ form.outcome.label(class="form-label") }}
-            {{ form.outcome(class="form-control") }}
-            {% for error in form.outcome.errors %}
+            {{ form.user_assigned_category.label(class="form-label") }}
+            {{ form.user_assigned_category(class="form-control") }}
+            {% for error in form.user_assigned_category.errors %}
                 <div class="text-danger">{{ error }}</div>
             {% endfor %}
         </div>

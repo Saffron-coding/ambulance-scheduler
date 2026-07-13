@@ -21,9 +21,9 @@
     <tbody>
         {% for item in scheduled_jobs %}
         <tr>
-            <td>{{ item.job.job_id }}</td>
-            <td>{{ item.job.category }}</td>
-            <td>{{ item.ambulance.ambulance_id }}</td>
+            <td>{{ item.job.id }}</td>
+            <td>{{ item.job.user_assigned_category }}</td>
+            <td>{{ item.ambulance.id }}</td>
             <td>{{ item.assigned_start.strftime('%Y-%m-%d %H:%M') }}</td>
             <td>{{ item.assigned_end.strftime('%Y-%m-%d %H:%M') }}</td>
         </tr>
@@ -37,7 +37,7 @@
 <table class="styled-table">
     <thead>
         <tr>
-            <th>Job ID</th>
+            <th>ID</th>
             <th>Category</th>
             <th>Location</th>
         </tr>

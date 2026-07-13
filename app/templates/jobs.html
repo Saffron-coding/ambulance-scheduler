@@ -16,7 +16,7 @@
         <thead>
             <tr>
                 <th>Incident name</th>
-                <th>Category</th>
+                <th>User_assigned_category</th>
                 <th>Location</th>
                 <th>Call time</th>
                 <th>Patient notes</th>
@@ -28,7 +28,7 @@
             {% for job in jobs %}
             <tr>
                 <td>{{ job.incident_name }}</td>
-                <td>{{ job.system_assigned_category }}</td>
+                <td>{{ job.user_assigned_category }}</td>
                 <td>{{ job.location }}</td>
                 <td>{{ job.call_time }}</td>
                 <td>{{ job.patient_notes }}</td>

@@ -1,8 +1,6 @@
 import requests
 import json
 import os
-from dotenv import load_dotenv
-load_dotenv()
 
 # was hardcoded before — now read from env, never committed
 API_key = os.environ["ORS_API_KEY"]

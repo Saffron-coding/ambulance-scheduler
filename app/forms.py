@@ -1,4 +1,3 @@
-from random import choices
 from wtforms.validators import DataRequired, Length, NumberRange
 from wtforms import SubmitField, SelectField, DateTimeField, DecimalField, DateTimeLocalField,FloatField, TextAreaField
 from wtforms.fields.numeric import IntegerField
@@ -60,6 +59,7 @@ class AmbulanceForm(FlaskForm):
                                     ("Roughley", "Roughley"), ("Walmley", "Walmley"),
                                     ("Birmingham city centre", "Birmingham city centre")],
                            validators=[DataRequired()])
+
     available_from = DateTimeLocalField(
         "Available From",
         format="%Y-%m-%dT%H:%M",
@@ -70,5 +70,6 @@ class AmbulanceForm(FlaskForm):
 
     equipment_type = SelectField("Equipment Type",choices=[("ALS", "ALS"), ("BLS", "BLS"),
     ("ILS", "ILS")], validators=[DataRequired()])
+
 
     submit = SubmitField("Add Ambulance")

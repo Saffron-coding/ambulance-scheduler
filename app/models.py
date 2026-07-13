@@ -6,11 +6,11 @@ from datetime import datetime
 class Job(db.Model):
     __tablename__ = 'job'
     id: so.Mapped[int] = so.mapped_column(db.Integer, primary_key=True)
-    episode_id: so.Mapped[int] = so.mapped_column(db.Integer, nullable=False)
+    episode_id: so.Mapped[int] = so.mapped_column(db.Integer, nullable=False, index=True)
     incident_name: so.Mapped[str] = so.mapped_column(db.String, nullable=False)
     user_assigned_category: so.Mapped[str] = so.mapped_column(sa.String(30), nullable=False)
     call_time: so.Mapped[datetime] = so.mapped_column(db.DateTime, nullable=False)
-    estimated_job_time: so.Mapped[datetime] = so.mapped_column(db.DateTime, nullable=False)
+    estimated_job_time: so.Mapped[float] = so.mapped_column(db.Float, nullable=False)
     location: so.Mapped[str] = so.mapped_column(sa.String(30), nullable=False)
     lat: so.Mapped[float] = so.mapped_column(db.Float, nullable=False)
     lon: so.Mapped[float] = so.mapped_column(db.Float, nullable=False)
@@ -33,8 +33,7 @@ class Ambulance(db.Model):
     available_from: so.Mapped[datetime] = so.mapped_column(db.DateTime, nullable=False)
     vehicle_type: so.Mapped[str] = so.mapped_column(db.String(50), nullable=False)
     equipment_type: so.Mapped[str] = so.mapped_column(db.String(50), nullable=False)
-    status: so.Mapped[str] = so.mapped_column(db.String(50), nullable=False)
-    equipment_level: so.Mapped[str] = so.mapped_column(db.String, nullable=False)
+
 
     def __repr__(self):
         return f"<Ambulance {self.name}>"
@@ -43,9 +42,9 @@ class Allocation(db.Model):
     __tablename__ = 'allocation'
     id : so.Mapped[int] = so.mapped_column(db.Integer, primary_key=True)
     ambulance_id: so.Mapped[int] = so.mapped_column(db.ForeignKey("ambulance.id", ondelete="CASCADE")
-                                                ,nullable=False)
+                                                ,nullable=False, index=True)
     job_id: so.Mapped[int] = so.mapped_column(db.ForeignKey("job.id", ondelete="CASCADE"),
-                                              nullable=False)
+                                              nullable=False, index=True)
     arrival_time: so.Mapped[datetime] = so.mapped_column(db.DateTime, nullable=False)
     clear_time: so.Mapped[datetime] = so.mapped_column(db.DateTime, nullable=False)
     response_minutes: so.Mapped[float] = so.mapped_column(db.Float, nullable=False)

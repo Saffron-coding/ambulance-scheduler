@@ -1,7 +1,6 @@
 from __future__ import annotations
 from datetime import timedelta, datetime
-import uuid
-from flask import Blueprint, render_template, request, redirect, url_for, flash, session, current_app
+from flask import Blueprint, render_template, request, redirect, url_for, flash, current_app
 from app import db
 from app.models import Job, Ambulance
 from app.forms import JobForm, AmbulanceForm
