@@ -143,8 +143,8 @@ def make_job(category, location_name, call_time):
         "lon": Locations[location_name][1],
         "patient_age": random.randint(18, 90),
         "patient_notes": random.choice(patient_notes),
-        "medical_history": random.choice(medical_history),
-        "estimated_job_time": round(random.uniform(lo, hi), 2),
+        "medical_history": random.choice(MEDICAL_HISTORY),
+        "estimated_job_time": round(random.uniform(lo, hi), 2)
     }
 
 

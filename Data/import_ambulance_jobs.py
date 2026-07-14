@@ -1,6 +1,7 @@
 import csv
 import glob
 import re
+import os
 from app import create_app, db
 from app.models import Job
 from datetime import datetime
@@ -27,9 +28,10 @@ def import_csv(csv_path):
                     lat=lat,
                     lon=lng,
                     user_assigned_category=row["user_assigned_category"],
-                    call_time= datetime.strptime(row["call_time"],"%Y-%m-%d %H:%M:%S.%f"),
+                    call_time= datetime.fromisoformat(row["call_time"]),
                     patient_age=int(row["patient_age"]),
                     medical_history=row["medical_history"],
+                    estimated_job_time=float(row["estimated_job_time"]),
                     patient_notes=row["patient_notes"]
                 )
 
@@ -40,6 +42,7 @@ def import_csv(csv_path):
 
 
 if __name__ == "__main__":
+    script_dir = os.path.dirname(os.path.abspath(__file__))
     with app.app_context():
-        for path in sorted(glob.glob("data/episode_*.csv")):
+        for path in sorted(glob.glob(os.path.join(script_dir, "Data", "episode_*.csv"))):
             import_csv(path)

@@ -21,9 +21,6 @@ def priority_map(category):
     }
     return priority_map.get(category, 99)
 
-def parse_time(time_string):
-    return datetime.strptime(time_string, "%Y-%m-%d %H:%M:%S")
-
 def rules_met(job, ambulance, category_requirements):
     rule = category_requirements[job.user_assigned_category]
     if ambulance.equipment_level not in rule['equipment']:
@@ -40,19 +37,19 @@ def run_scheduler(jobs, ambulances):
     # Sort jobs by priority first, then by earliest call time
     sorted_jobs = sorted(
         jobs,
-        key=lambda job: (priority_map(job.user_assigned_category), parse_time(job.call_time)))
+        key=lambda job: (priority_map(job.user_assigned_category), job.call_time))
 
     # Convert ambulance availability into datetime objects
     ambulance_state = []
     for ambulance in ambulances:
         ambulance_state.append({
             "ambulance": ambulance,
-            "available_from": parse_time(ambulance.available_from)
+            "available_from": ambulance.available_from
         })
 
     #process each job
     for job in sorted_jobs:
-        job_start = parse_time(job.call_time)
+        job_start = job.call_time
         #list of ambulances that can take this job
         candidate_ambulances = []
 
@@ -69,7 +66,7 @@ def run_scheduler(jobs, ambulances):
             job.lat,
             job.lon,
             candidate_ambulances)
-        job_start = parse_time(job.call_time)
+        job_start = job.call_time
         if best_ambulance is None:
             #if no ambulance available
             unscheduled_jobs.append(job)
