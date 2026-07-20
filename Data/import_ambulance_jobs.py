@@ -5,7 +5,7 @@ import os
 from app import create_app, db
 from app.models import Job
 from datetime import datetime
-from app.utlis.locations import Locations
+from app.Utils.locations import Locations
 
 app = create_app()
 

@@ -1,10 +1,12 @@
-from datetime import datetime, timedelta
-from app.utlis.distance import  get_eta, find_closest_ambulance
+from datetime import *
+import heapq
+from itertools import count
+from app.Utils.distance import  get_eta, find_closest_ambulance
 
 category_requirements = {
             "C1": {"equipment": ["ALS", "BLS"],
                    "vehicle": ["Rapid Response", "Double Crewed Ambulance"]},
-            "C2": {"equipment": ["ALS", "BLS", "ILS"],
+            "C2": {"equipment": ["ALS", "BLS"],
                    "vehicle": ["Rapid Response", "Double Crewed Ambulance"]},
             "C3": {"equipment": ["ALS", "BLS", "ILS"],
                    "vehicle": ["Rapid Response", "Double Crewed Ambulance", "Patient Transport Service"]},
@@ -23,74 +25,114 @@ def priority_map(category):
 
 def rules_met(job, ambulance, category_requirements):
     rule = category_requirements[job.user_assigned_category]
-    if ambulance.equipment_level not in rule['equipment']:
+    if ambulance.equipment_type not in rule['equipment']:
         return False
     if ambulance.vehicle_type not in rule['vehicle']:
         return False
     return True
 
-
 def run_scheduler(jobs, ambulances):
+    """
+    Event-driven version of run_scheduler.
+
+    run_scheduler sees the whole episode at once and sorts every job by
+    priority before making a single decision, so a C1 called at 14:00 can
+    outrank a C3 called at 09:00 that a real dispatcher would already be
+    acting on. This version only ever lets a job influence a decision once
+    its own call_time has passed, and only reconsiders ambulances at the
+    moment they actually become free (or a new job arrives) - the two kinds
+    of "events" in the simulation.
+
+    Jobs that arrive but find nothing eligible free go into a priority
+    queue (`pending`) and get retried every time an ambulance frees up or
+    another job arrives, instead of being marked unscheduled immediately.
+    """
     scheduled_jobs = []
     unscheduled_jobs = []
+# loop through every ambulance and create an ambulance state including ambulance.id and available time
+    ambulance_state = {
+        ambulance.id: {"ambulance": ambulance, "available_from": ambulance.available_from}
+        for ambulance in ambulances
+    }
+#arrivals hold the entire job data indexed
+    arrivals = sorted(jobs, key=lambda job: job.call_time)
+    arrival_idx = 0
+#tie is a way of assigning a ticket number per ambulance job so that if it looks the same as another there is a tie
+    tie = count()
+    pending = []  # heap of (priority, call_time, tie, job) - jobs waiting for an ambulance
 
-    # Sort jobs by priority first, then by earliest call time
-    sorted_jobs = sorted(
-        jobs,
-        key=lambda job: (priority_map(job.user_assigned_category), job.call_time))
+    # seed the event queue with every job arrival and every ambulance's
+    # initial availability; assignments push new "free" events as they happen
+    #events list is dynamic continuously updating as ambulances free up
+    events = []  # heap of (time, tie, kind)
+    for job in arrivals:
+        #this takes my heap of events and adds job call time with the top always being the earliest value
+        heapq.heappush(events, (job.call_time, next(tie), "arrival"))
 
-    # Convert ambulance availability into datetime objects
-    ambulance_state = []
-    for ambulance in ambulances:
-        ambulance_state.append({
-            "ambulance": ambulance,
-            "available_from": ambulance.available_from
-        })
+    for state in ambulance_state.values():
+        heapq.heappush(events, (state["available_from"], next(tie), "free"))
+#evaluates whether I can assign waiting jobs
+    def try_match(now):
+#are there any ambulances available now
+        free_ambulances = [
+            state["ambulance"] for state in ambulance_state.values()
+            if state["available_from"] <= now
+        ]
+#if no free ambulances or no pending jobs do nothing
+        if not free_ambulances or not pending:
+            return
 
-    #process each job
-    for job in sorted_jobs:
-        job_start = job.call_time
-        #list of ambulances that can take this job
-        candidate_ambulances = []
+        held = []
+        while pending and free_ambulances:
+            priority, call_time, _, job = heapq.heappop(pending)
+            candidates = [a for a in free_ambulances if rules_met(job, a, category_requirements)]
+            best_ambulance, eta_minutes = find_closest_ambulance(job.lat, job.lon, candidates)
 
-        for state in ambulance_state:
-            if state["available_from"] <= job_start:
-                ambulance = state["ambulance"]
+            if best_ambulance is None:
+                held.append((priority, call_time, job))
+                continue
 
-                if rules_met(job, ambulance, category_requirements):
-                    candidate_ambulances.append(ambulance)
+            job_duration = timedelta(minutes=eta_minutes + job.estimated_job_time)
+            job_end = now + job_duration
+            scheduled_jobs.append({
+                "job": job,
+                "ambulance": best_ambulance,
+                "assigned_start": now,
+                "assigned_end": job_end,
+                "eta_minutes": eta_minutes
+            })
 
+            ambulance_state[best_ambulance.id]["available_from"] = job_end
+#instead of checking every minute a future event is created stating the time an ambulance will be free
+            heapq.heappush(events, (job_end, next(tie), "free"))
+#
+            free_ambulances = [a for a in free_ambulances if a.id != best_ambulance.id]
 
-#call API to decide which ambulance goes to which job based on distance
-        best_ambulance, eta_minutes = find_closest_ambulance(
-            job.lat,
-            job.lon,
-            candidate_ambulances)
-        job_start = job.call_time
-        if best_ambulance is None:
-            #if no ambulance available
-            unscheduled_jobs.append(job)
-            continue
-        job_duration = timedelta(minutes=eta_minutes + job.estimated_job_time)
+        for priority, call_time, job in held:
+            heapq.heappush(pending, (priority, call_time, next(tie), job))
 
-        assigned = False
+    while events:
+        now = events[0][0]
 
-#keep this here
-        for state in ambulance_state:
-            if state["ambulance"] == best_ambulance and state["available_from"] <= job_start:
-                scheduled_jobs.append({
-                    "job": job,
-                    "ambulance": state["ambulance"],
-                    "assigned_start": job_start,
-                    "assigned_end": job_start + job_duration,
-                    "eta_minutes": eta_minutes
-                })
+        # pull every event sharing this exact timestamp (e.g. several calls
+        # arriving at once, or a call landing the same instant an ambulance
+        # frees up) into `pending` before matching anything, so simultaneous
+        # arrivals are decided by (priority, call_time) - not by whatever
+        # order they happened to pop off `events` in
+        while events and events[0][0] == now:
+            _, _, kind = heapq.heappop(events)
+            if kind == "arrival":
+                job = arrivals[arrival_idx]
+                arrival_idx += 1
+                heapq.heappush(
+                    pending,
+                    (priority_map(job.user_assigned_category), job.call_time, next(tie), job)
+                )
 
-                state["available_from"] = job_start + job_duration
-                assigned = True
-                break
+        try_match(now)
 
-        if not assigned:
-            unscheduled_jobs.append(job)
+    # anything still waiting once every arrival and every ambulance free-up
+    # has been processed never found an eligible ambulance
+    unscheduled_jobs = [job for *_, job in pending]
 
     return scheduled_jobs, unscheduled_jobs

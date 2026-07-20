@@ -19,7 +19,7 @@ import os
 import math
 from datetime import datetime, timedelta
 
-from app.utlis.locations import Locations
+from app.Utils.locations import Locations
 
 # Fixed reference start so "07:00 on day 1" means the same thing in every
 # episode; only offsets within the shift window vary by seed.
@@ -37,7 +37,7 @@ POOL_SHARE = {"als": 0.5, "any": 0.5}
 POOL_CATEGORY_WEIGHTS = {
 #within the als cluster 20% will be C1 and 80% will be C2
     "als": {"C1": 0.2, "C2": 0.8},
-#within the any cluster 60% will be C3 and 40% will be C4
+#within any cluster 60% will be C3 and 40% will be C4
     "any": {"C3": 0.6, "C4": 0.4},
 }
 

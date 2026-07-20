@@ -5,7 +5,7 @@ from app import db
 from app.models import Job, Ambulance
 from app.forms import JobForm, AmbulanceForm
 from app.scheduler import run_scheduler
-from app.utlis import locations
+from app.Utils import locations
 
 main_bp = Blueprint('main', __name__)
 
@@ -59,7 +59,7 @@ def edit_job(id):
         job.location = form.location.data
         job.category = form.category.data
         job.call_time = form.call_time.data.strftime("%Y-%m-%d %H:%M")
-        job.total_job_minutes = form.total_job_minutes.data
+        job.estimated_job_time = form.estimated_job_time.data
         job.outcome = form.outcome.data
         db.session.commit()
         flash('You have updated the job')
@@ -84,9 +84,14 @@ def ambulances():
 def add_ambulance():
     form = AmbulanceForm()
     if form.validate_on_submit():
+        location_name = form.location.data
+        lat, lng = locations[location_name]
+
         ambulance = Ambulance(
             name=form.name.data,
             location=form.location.data,
+            latitude=lat,
+            longitude=lng,
             vehicle_type=form.vehicle_type,
             equipment_type=form.equipment_type,
             available_from=form.available_from.data.strftime("%Y-%m-%d %H:%M")
