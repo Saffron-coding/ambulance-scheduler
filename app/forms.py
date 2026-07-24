@@ -60,7 +60,7 @@ class AmbulanceForm(FlaskForm):
                                     ("Birmingham city centre", "Birmingham city centre")],
                            validators=[DataRequired()])
 
-    available_from = DateTimeLocalField(
+    available_from = DateTimeField(
         "Available From",
         format="%Y-%m-%dT%H:%M",
         validators=[DataRequired()]

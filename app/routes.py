@@ -1,10 +1,10 @@
 from __future__ import annotations
-from datetime import timedelta, datetime
-from flask import Blueprint, render_template, request, redirect, url_for, flash, current_app
+from datetime import datetime
+from flask import Blueprint, render_template, request, redirect, url_for, flash
 from app import db
 from app.models import Job, Ambulance
 from app.forms import JobForm, AmbulanceForm
-from app.scheduler import run_scheduler
+from scheduling.greedy_based_scheduler import run_scheduler
 from app.Utils import locations
 
 main_bp = Blueprint('main', __name__)

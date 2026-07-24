@@ -222,7 +222,7 @@ if __name__ == "__main__":
                         help="fraction of jobs placed in contention clusters (0-1)")
     parser.add_argument("--cluster-spread-min", type=float, default=20,
                         help="temporal spread (std dev, minutes) of each cluster")
-    parser.add_argument("--out-dir", type=str, default="Data")
+    parser.add_argument("--out-dir", type=str, default="Data_files")
     args = parser.parse_args()
 
     for s in args.seeds:

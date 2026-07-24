@@ -44,5 +44,5 @@ def import_csv(csv_path):
 if __name__ == "__main__":
     script_dir = os.path.dirname(os.path.abspath(__file__))
     with app.app_context():
-        for path in sorted(glob.glob(os.path.join(script_dir, "Data", "episode_*.csv"))):
+        for path in sorted(glob.glob(os.path.join(script_dir, "Data_files", "episode_*.csv"))):
             import_csv(path)

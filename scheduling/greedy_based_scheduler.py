@@ -4,9 +4,9 @@ from itertools import count
 from app.Utils.distance import  get_eta, find_closest_ambulance
 
 category_requirements = {
-            "C1": {"equipment": ["ALS", "BLS"],
+            "C1": {"equipment": ["ALS"],
                    "vehicle": ["Rapid Response", "Double Crewed Ambulance"]},
-            "C2": {"equipment": ["ALS", "BLS"],
+            "C2": {"equipment": ["ALS", "ILS"],
                    "vehicle": ["Rapid Response", "Double Crewed Ambulance"]},
             "C3": {"equipment": ["ALS", "BLS", "ILS"],
                    "vehicle": ["Rapid Response", "Double Crewed Ambulance", "Patient Transport Service"]},
@@ -33,12 +33,9 @@ def rules_met(job, ambulance, category_requirements):
 
 def run_scheduler(jobs, ambulances):
     """
-    Event-driven version of run_scheduler.
+    Event-driven scheduler.
 
-    run_scheduler sees the whole episode at once and sorts every job by
-    priority before making a single decision, so a C1 called at 14:00 can
-    outrank a C3 called at 09:00 that a real dispatcher would already be
-    acting on. This version only ever lets a job influence a decision once
+    This improved scheduler only ever lets a job influence a decision once
     its own call_time has passed, and only reconsiders ambulances at the
     moment they actually become free (or a new job arrives) - the two kinds
     of "events" in the simulation.

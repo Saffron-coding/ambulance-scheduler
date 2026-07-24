@@ -1,94 +1,75 @@
-"""Generate reproducible ambulance fleet of fixed 12 ambulances that will be resourced against 50 ambulance jobs
-this is a scaled version of the real life operational constraint that occurs with WMAS operating 460 ambulances a day"""
-#I need to decide what portion of ambulance have what equipment and vehicle type ratio must be in-line with NHS statistics
+"""Fleet construction for ambulance pool
 
-
+Builds the starting ambulance pool: each unit in COMPOSITION is assigned a
+distinct home base drawn from the location set, using an isolated, seeded RNG
+so the layout is reproducible and independent of any other random draws in
+the process (job generation, tie-breaking, etc.).
+"""
 import random
-import csv
-import argparse
-import os
-import math
-from datetime import datetime, timedelta
-from app.Utils.locations import Locations
+from dataclasses import dataclass
+from datetime import datetime
 
-# ══════════════════════════════════════════════════════════
-# AMBULANCE POOL GENERATOR  — run once, produces ambulances.csv
-# Static reference data: no episode_id, no timestamps.
-# ══════════════════════════════════════════════════════════
+# Draft 12-unit fleet. (vehicle_type, equipment_level)
+# Vehicle type encodes job eligibility only, not speed.
+COMPOSITION: list[tuple[str, str]] = [
+    ("RRV", "ALS"), ("RRV", "ALS"), ("RRV", "ALS"),
+    ("DCA", "ALS"), ("DCA", "ALS"), ("DCA", "ALS"),
+    ("DCA", "BLS"), ("DCA", "BLS"),
+    ("DCA", "ILS"), ("DCA", "ILS"),
+    ("PTS", "BLS"), ("PTS", "BLS"),
+]
 
-from app.Utils import locations           # {name: (lat, lon)} — your 33 fixed Birmingham sites
+@dataclass
+class Ambulance:
+    """A single unit.
 
-CONSTANTS:
-    SEED        = 42
-    OUTPUT_CSV  = "Data/ambulances.csv"
-    FIELDNAMES  = [ambulance_id, home_base, lat, lon, equipment, vehicle_type]
+    `home_*` is the station the unit returns to after completing a job;
+    `current_*` is where it actually is. Under a return-to-base policy the two
+    coincide whenever the unit is idle. Swap this class out for the SQLAlchemy
+    model if the pool is persisted rather than held in memory.
+    """
 
-    # Fixed fleet mix as (vehicle_type, equipment) pairs — sums to 12.
-    # Set explicitly so the proportions are a justifiable modelling choice.
-    FLEET_COMPOSITION = [
-        (Rapid Response,            ALS)   ×3
-        (Double Crewed Ambulance,   ALS)   ×3
-        (Double Crewed Ambulance,   BLS)   ×2
-        (Double Crewed Ambulance,   ILS)   ×2
-        (Patient Transport Service, BLS)   ×2
-    ]
+    id: str
+    base: str
+    home_lat: float
+    home_lon: float
+    equipment_level: str
+    vehicle_type: str
+    available_from: datetime
 
-    # Your scheduler.py table — reused ONLY to sanity-check coverage.
-    CATEGORY_REQUIREMENTS = {
-        C1: equipment ∈ {ALS, BLS},       vehicle ∈ {RRV, DCA}
-        C2: equipment ∈ {ALS, BLS, ILS},  vehicle ∈ {RRV, DCA}
-        C3: equipment ∈ {ALS, BLS, ILS},  vehicle ∈ {RRV, DCA, PTS}
-        C4: equipment ∈ {ALS, BLS, ILS},  vehicle ∈ {RRV, DCA, PTS}
-    }
+    def __post_init__(self) -> None:
+        self.current_lat = self.home_lat
+        self.current_lon = self.home_lon
 
 
-# ── build one ambulance record (one CSV row) ──────────────
-FUNCTION make_ambulance(ambulance_id, home_base, lat, lon, equipment, vehicle_type):
-    RETURN record {
-        ambulance_id, home_base, lat, lon, equipment, vehicle_type
-    }
+def make_ambulance(
+    ambulance_id: str,
+    base: str,
+    lat: float,
+    lon: float,
+    equipment_level: str,
+    vehicle_type: str,
+    available_from: datetime
+) -> Ambulance:
+    return Ambulance(
+        id=ambulance_id,
+        base=base,
+        home_lat=lat,
+        home_lon=lon,
+        equipment_level=equipment_level,
+        vehicle_type=vehicle_type,
+        available_from=available_from
+    )
 
+def build_ambulance_pool(locations, composition, seed):
+    random.seed(seed)
+    names = sorted(locations)
+    bases = random.sample(names, k=len(composition))
 
-# ── build the pool of 12 (seeded, reproducible) ───────────
-FUNCTION build_ambulance_pool(Locations, composition, seed):
-    rng   ← seeded_rng(seed)                       # isolated generator
-    names ← sort( keys of Locations )              # stable order before sampling
-    bases ← rng.sample(names, size = length(composition))   # distinct home locations
-
-    pool ← empty list
-    FOR i FROM 0 TO length(composition) - 1:
-        base                    ← bases[i]
-        (vehicle_type, equip)   ← composition[i]
-        (lat, lon)              ← Locations[base]   # coords from your dict
-        id                      ← "AMB_" + zero_pad(i, 2)
-        pool.append( make_ambulance(id, base, lat, lon, equip, vehicle_type) )
-
-    RETURN pool
-
-
-# ── write to CSV ──────────────────────────────────────────
-FUNCTION write_ambulances_csv(pool, path):
-    OPEN path FOR writing:
-        write header row  = FIELDNAMES
-        FOR EACH ambulance IN pool:
-            write row = values of ambulance in FIELDNAMES order
-
-
-# ── feasibility check: every category must have ≥1 unit ───
-FUNCTION coverage_report(pool):
-    FOR EACH (category, req) IN CATEGORY_REQUIREMENTS:
-        eligible ← count units a IN pool WHERE
-                       a.equipment    ∈ req.equipment
-                   AND a.vehicle_type ∈ req.vehicle
-        PRINT category, eligible
-        ASSERT eligible > 0        # else those jobs are unservable → penalty noise
-
-
-# ── main (run once) ───────────────────────────────────────
-MAIN:
-    pool ← build_ambulance_pool(Locations, FLEET_COMPOSITION, SEED)
-    write_ambulances_csv(pool, OUTPUT_CSV)
-    coverage_report(pool)
-
+    pool = []
+    for i, (base, (vehicle_type, equipment_level)) in enumerate(zip(bases, composition)):
+        lat, lon = locations[base]
+        pool.append(Ambulance(f"AMB_{i:02d}", base, lat, lon, equipment_level, vehicle_type))
+    return pool
 
 
