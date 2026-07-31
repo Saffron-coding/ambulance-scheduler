@@ -25,8 +25,8 @@ class Job(db.Model):
 
 class Ambulance(db.Model):
     __tablename__ = 'ambulance'
-    id : so.Mapped[int] = so.mapped_column(db.Integer, primary_key=False)
-    name :so.Mapped[str] = so.mapped_column(db.String, nullable=True)
+    id : so.Mapped[int] = so.mapped_column(db.Integer, primary_key=True)
+    name :so.Mapped[str] = so.mapped_column(db.String, nullable=False)
     location: so.Mapped[str] = so.mapped_column(sa.String(30), nullable=False)
     lat: so.Mapped[float] = so.mapped_column(db.Float, nullable=False)
     lon: so.Mapped[float] = so.mapped_column(db.Float, nullable=False)
@@ -40,15 +40,16 @@ class Ambulance(db.Model):
 
 class Allocation(db.Model):
     __tablename__ = 'allocation'
-    id : so.Mapped[int] = so.mapped_column(db.Integer, primary_key=False)
+    id : so.Mapped[int] = so.mapped_column(db.Integer, primary_key=True)
     ambulance_id: so.Mapped[int] = so.mapped_column(db.ForeignKey("ambulance.id", ondelete="CASCADE")
-                                                ,nullable=False, index=False)
+                                                ,nullable=False, index=True)
     job_id: so.Mapped[int] = so.mapped_column(db.ForeignKey("job.id", ondelete="CASCADE"),
-                                              nullable=False, index=False)
+                                              nullable=False, index=True)
     arrival_time: so.Mapped[datetime] = so.mapped_column(db.DateTime, nullable=False)
     clear_time: so.Mapped[datetime] = so.mapped_column(db.DateTime, nullable=False)
     response_minutes: so.Mapped[float] = so.mapped_column(db.Float, nullable=False)
     total_job_minutes: so.Mapped[float] = so.mapped_column(db.Float, nullable=False)
     outcome: so.Mapped[str] = so.mapped_column(db.String, nullable=False)
+    reason: so.Mapped[str] = so.mapped_column(db.String, nullable=False)
 
 

@@ -1,1 +1,5 @@
-Single-database configuration for Flask.
+This is a scheduling algorithm with a UI using flask as a default this system uses a greedy algorithm to assign ambulance
+jobs to ambulances please change the import on on the route to agentic_scheduler to change the algorithm for ambulance
+allocation which utilises an LLM to trade off operational constraints.
+
+

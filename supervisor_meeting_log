@@ -1,0 +1,21 @@
+Supervisor log – meetings
+Summary: My supervisor and I meet roughly every 1-2 weeks, to discuss progress and answer any remaining questions or challenges I have incurred. My supervisor has advised me on project changes, tracking progress, report information, and use of generative AI within projects.
+
+
+Meeting one:
+-	Discussed where I could obtain research for my project and if there was a university directory for me to find journal articles, supervisor advised google scholar was acceptable and that I could use journal of science and I could also use generative AI such as Chat GPT to search, however I needed to validate all sources check DOIs and check against my project idea.
+-	Discussed dual system approach my supervisor advised simplifying project and that it would be necessary to justify my data and choices I made needed to be explained, why I created this data- I explained that my data was proportional to NHS statistics, and he confirmed this was a reasonable justification.
+Meeting two:
+-	Discussion of dissertation multi-layered system. Discussed research idea two have a dual system approach with one being a rule based deterministic system which would upgrade category allocation based on deterministic set of rules. And the other part of the system making ambulance allocation(scheduling system).
+-	Discussion of whether a ground truth is needed and I will I measure what an optimal scheduling decision is as this is ambulance allocation, and all results will be synthetic as well as all data.
+-	Supervisor advised there was no ground truth necessary for ambulance allocation project. And project should be simplified to be a scheduling system as the secondary part of my project was not a combinatorial optimisation problem. Further advised a RAG implementation was not something he could not advise on as this was not his area of expertise.
+Meeting three:
+-	Agreed that project should be simplified to be exclusively a scheduling system.
+-	Session focused on data and the report aspect of the project. Supervisor advised that I could use generative AI to help me create my data as long as I cited this in project.
+-	Supervisor confirmed that project seem to be more research orientated rather than software development so having a UI was not necessary and the output of both systems should be tested rather than using outside testers. I confirmed that I was going to maintain my existing UI but that this was not going function as a core part of my project.
+Meeting four:
+-	Discussed repository as I was unsure how to commit both systems to Gitlab asked for another repository he confirmed that adding information to ReadMe was sufficient and that committing to one repository was a simple approach
+-	Discussed the different algorithms and discussed justifying algorithmic choices was necessary to include in report.
+-	Discussed demo aspect of the project stated he would confirm further advised he would send a department wide email to the school. Confirmed that the marker wants to know about your project, introduce motivation and explain why you made certain choices.
+-	Supervisor confirmed having an appendix of citations was sufficient and I didn’t need to include footnotes as an addition.
+-	Discussed stylistic choices for report: 1.5 line spacing, any professional font, no more than 40 pages, no word count.
