@@ -162,8 +162,7 @@ def generate_episode(seed, num_jobs=50, shift_hours=8, clustered_share=0.7,
     cluster_spread_min: std dev (minutes) of call times around a burst centre
     neighbour_k:        cluster jobs drawn from anchor + its k nearest sites
     distance_fn:        distance between two (lat, lon) tuples used for the
-                        neighbour grouping; defaults to haversine, pass a
-                        route-cache wrapper for real drive distances
+                        neighbour grouping; defaults to haversine.
     """
     random.seed(seed)
     shift_start = shift_start or SHIFT_REFERENCE_START

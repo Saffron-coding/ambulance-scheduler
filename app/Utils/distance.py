@@ -22,20 +22,22 @@ _cache = None  # loaded lazily, kept in memory for the life of the process
 
 
 def _load_cache():
-    global _cache
-    if _cache is None:
-        if os.path.exists(CACHE_PATH):
-            with open(CACHE_PATH) as f:
-                _cache = json.load(f)
-        else:
-            _cache = {}
-    return _cache
+	global _cache
+	if _cache is None:
+		if os.path.exists(CACHE_PATH):
+			with open(CACHE_PATH) as f:
+				_cache = json.load(f)
+		else:
+			_cache = {}
+			_save_cache()
+
+	return _cache
 
 #this ensures that cached routes are saved and updated
 def _save_cache():
     os.makedirs(os.path.dirname(CACHE_PATH), exist_ok=True)
     with open(CACHE_PATH, "w") as f:
-        json.dump(_cache, f)
+        json.dump(_cache, f, indent=2)
 
 
 def _cache_key(start_lat, start_lon, end_lat, end_lon):
@@ -46,6 +48,9 @@ def _cache_key(start_lat, start_lon, end_lat, end_lon):
 def get_eta(start_lat, start_lon, end_lat, end_lon):
     cache = _load_cache()
     key = _cache_key(start_lat, start_lon, end_lat, end_lon)
+    #just ensures api isn't called when ambulance and job are in the same place
+    if start_lat == end_lat and start_lon == end_lon:
+	    return 0.0, 0.0
 
     if key in cache:
         distance_miles, eta_minutes = cache[key]
@@ -61,7 +66,7 @@ def get_eta(start_lat, start_lon, end_lat, end_lon):
     response = requests.post(url, json=payload, headers=headers)
 # this is because API has a limit on the number of calls this should not be hit as we are storing the number of repeat calls
     if response.status_code == 429:
-        raise RuntimeError("OpenRouteService rate limit hit — check cache is being used and/or slow down requests")
+        raise RuntimeError(f"ORS said: {response.text} | headers: {dict(response.headers)}OpenRouteService rate limit hit — check cache is being used and/or slow down requests")
     response.raise_for_status()
 
     data = response.json()

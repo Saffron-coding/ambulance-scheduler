@@ -26,7 +26,7 @@ def priority_map(category):
 def rules_met(job, ambulance, category_requirements):
     rule = category_requirements[job.user_assigned_category]
     if ambulance.equipment_type not in rule['equipment']:
-        return False
+	    print(f"{ambulance.name} rejected: {ambulance.vehicle_type}")
     if ambulance.vehicle_type not in rule['vehicle']:
         return False
     return True

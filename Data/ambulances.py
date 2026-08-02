@@ -4,18 +4,18 @@ from datetime import datetime
 from app.Utils.locations import Locations
 
 FLEET = [
-    ("RRV", "ALS"),
-    ("RRV", "ALS"),
-    ("RRV", "ALS"),
-    ("DCA", "ALS"),
-    ("DCA", "ALS"),
-    ("DCA", "ALS"),
-    ("DCA", "BLS"),
-    ("DCA", "BLS"),
-    ("DCA", "ILS"),
-    ("DCA", "ILS"),
-    ("PTS", "BLS"),
-    ("PTS", "BLS"),
+    ("Rapid Response", "ALS"),
+    ("Rapid Response", "ALS"),
+    ("Rapid Response", "ALS"),
+    ("Double Crewed Ambulance", "ALS"),
+    ("Double Crewed Ambulance", "ALS"),
+    ("Double Crewed Ambulance", "ALS"),
+    ("Double Crewed Ambulance", "BLS"),
+    ("Double Crewed AmbulanceA", "BLS"),
+    ("Double Crewed Ambulance", "ILS"),
+    ("Double Crewed Ambulance", "ILS"),
+    ("Patient Transport Service", "BLS"),
+    ("Patient Transport Service", "BLS"),
 ]
 
 available_from = datetime(2026, 1, 1, 8, 0, 0)
@@ -36,7 +36,7 @@ for i, ((vehicle_type, equipment_type), base) in enumerate(zip(FLEET, bases), st
         "equipment_type": equipment_type,
     })
 
-with open("ambulances.csv", "w", newline="") as f:
+with open("Data_files/ambulances.csv", "w", newline="") as f:
     writer = csv.DictWriter(f, fieldnames=[
         "id", "name", "location", "lat", "lon",
         "available_from", "vehicle_type", "equipment_type",

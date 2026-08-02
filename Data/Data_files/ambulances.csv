@@ -1,0 +1,13 @@
+id,name,location,lat,lon,available_from,vehicle_type,equipment_type
+1,AMB01,Rubery,52.3978566,-2.0391376,2026-01-01T08:00:00,Rapid Response,ALS
+2,AMB02,Edgbaston,52.4612105,-1.9290562,2026-01-01T08:00:00,Rapid Response,ALS
+3,AMB03,Stirchley,52.4286323,-1.9271269,2026-01-01T08:00:00,Rapid Response,ALS
+4,AMB04,Walmley,52.5400558,-1.801568,2026-01-01T08:00:00,Double Crewed Ambulance,ALS
+5,AMB05,Great Barr,52.5483541,-1.9422477,2026-01-01T08:00:00,Double Crewed Ambulance,ALS
+6,AMB06,Yardley,52.4690654,-1.8077357,2026-01-01T08:00:00,Double Crewed Ambulance,ALS
+7,AMB07,Four Oaks,52.5864368,-1.8420917,2026-01-01T08:00:00,Double Crewed Ambulance,BLS
+8,AMB08,Roughley,52.5913569,-1.8193277,2026-01-01T08:00:00,Double Crewed AmbulanceA,BLS
+9,AMB09,Newtown,52.4965335,-1.9363753,2026-01-01T08:00:00,Double Crewed Ambulance,ILS
+10,AMB10,Bournville,52.4247354,-1.9470034,2026-01-01T08:00:00,Double Crewed Ambulance,ILS
+11,AMB11,Harborne,52.4611807,-1.9840735,2026-01-01T08:00:00,Patient Transport Service,BLS
+12,AMB12,Bartley Green,52.4352714,-2.0008842,2026-01-01T08:00:00,Patient Transport Service,BLS
