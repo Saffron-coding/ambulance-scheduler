@@ -107,7 +107,7 @@ def schedule():
 	jobs = Job.query.all()
 	ambulances = Ambulance.query.all()
 
-	scheduled_jobs, unscheduled_jobs = run_scheduler(jobs, ambulances, shift_start=8)
+	scheduled_jobs, unscheduled_jobs = run_scheduler(jobs, ambulances)
 
 
 	print(f"Scheduled: {len(scheduled_jobs)}")

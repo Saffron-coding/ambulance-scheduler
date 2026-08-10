@@ -2,6 +2,9 @@ from datetime import *
 import heapq
 from itertools import count
 from app.Utils.distance import  get_eta, find_closest_ambulance
+from app.Allocation_reason import persist_allocations, downgrade_cost
+from app.models import Allocation
+from app import db
 
 SHIFT_REFERENCE_START = datetime(2026, 3, 2, 8, 0, 0)
 
@@ -46,7 +49,9 @@ def rules_met(job, ambulance, category_requirements):
     another job arrives, instead of being marked unscheduled immediately.
         """
 
-def run_scheduler(jobs, ambulances, shift_start):
+def run_scheduler(jobs, ambulances):
+    Allocation.query.filter_by(scheduler_type="greedy").delete()
+    db.session.commit()
     horizon = SHIFT_REFERENCE_START + timedelta(hours=8)
 
     scheduled_jobs = []
@@ -101,7 +106,10 @@ def run_scheduler(jobs, ambulances, shift_start):
                 "ambulance": best_ambulance,
                 "assigned_start": now,
                 "assigned_end": job_end,
-                "eta_minutes": eta_minutes
+                "eta_minutes": eta_minutes,
+                "response_minutes": eta_minutes + (now - job.call_time).total_seconds() / 60,
+                "total_job_minutes": eta_minutes + job.estimated_job_time,
+                "equipment_downgrade_cost": downgrade_cost(job.user_assigned_category, best_ambulance.equipment_type),
             })
 
             ambulance_state[best_ambulance.id]["available_from"] = job_end
@@ -136,5 +144,7 @@ def run_scheduler(jobs, ambulances, shift_start):
     # anything still waiting once every arrival and every ambulance free-up
     # has been processed found an eligible ambulance
     unscheduled_jobs = [job for *_, job in pending]
+
+    persist_allocations(scheduled_jobs, "greedy")
 
     return scheduled_jobs, unscheduled_jobs
