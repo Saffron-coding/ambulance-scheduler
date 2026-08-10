@@ -51,5 +51,8 @@ class Allocation(db.Model):
     total_job_minutes: so.Mapped[float] = so.mapped_column(db.Float, nullable=False)
     outcome: so.Mapped[str] = so.mapped_column(db.String, nullable=False)
     reason: so.Mapped[str] = so.mapped_column(db.String, nullable=False)
+    scheduler_type: so.Mapped[str] = so.mapped_column(db.String(40), nullable=False, server_default="greedy" )
+    equipment_downgrade_cost: so.Mapped[float] = so.mapped_column(db.Float, nullable=False, server_default="0")
+
 
 

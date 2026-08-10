@@ -23,7 +23,7 @@ from app.Utils.locations import Locations
 
 # Fixed reference start so "07:00 on day 1" means the same thing in every
 # episode; only offsets within the shift window vary by seed.
-SHIFT_REFERENCE_START = datetime(2026, 3, 2, 7, 0, 0)
+SHIFT_REFERENCE_START = datetime(2026, 3, 2, 8, 0, 0)
 
 # NHS AQI proportions (C1:C2:C3:C4 = 5:20:15:10) — used for background jobs.
 CATEGORY_WEIGHTS = {"C1": 5, "C2": 20, "C3": 15, "C4": 10}

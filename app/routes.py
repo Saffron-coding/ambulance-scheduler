@@ -107,17 +107,8 @@ def schedule():
 	jobs = Job.query.all()
 	ambulances = Ambulance.query.all()
 
-	print(f"Jobs loaded: {len(jobs)}")
-	print(f"Ambulances loaded: {len(ambulances)}")
+	scheduled_jobs, unscheduled_jobs = run_scheduler(jobs, ambulances, shift_start=8)
 
-	if jobs:
-		print("First job:", jobs[0].__dict__)
-
-	if ambulances:
-		print("First ambulance:", ambulances[0].__dict__)
-
-
-	scheduled_jobs, unscheduled_jobs = run_scheduler(jobs, ambulances)
 
 	print(f"Scheduled: {len(scheduled_jobs)}")
 	print(f"Unscheduled: {len(unscheduled_jobs)}")

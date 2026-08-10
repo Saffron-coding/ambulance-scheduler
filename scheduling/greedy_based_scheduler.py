@@ -3,6 +3,8 @@ import heapq
 from itertools import count
 from app.Utils.distance import  get_eta, find_closest_ambulance
 
+SHIFT_REFERENCE_START = datetime(2026, 3, 2, 8, 0, 0)
+
 category_requirements = {
             "C1": {"equipment": ["ALS"],
                    "vehicle": ["Rapid Response", "Double Crewed Ambulance"]},
@@ -26,13 +28,12 @@ def priority_map(category):
 def rules_met(job, ambulance, category_requirements):
     rule = category_requirements[job.user_assigned_category]
     if ambulance.equipment_type not in rule['equipment']:
-	    print(f"{ambulance.name} rejected: {ambulance.vehicle_type}")
+        return False
     if ambulance.vehicle_type not in rule['vehicle']:
         return False
     return True
 
-def run_scheduler(jobs, ambulances):
-    """
+"""
     Event-driven scheduler.
 
     This improved scheduler only ever lets a job influence a decision once
@@ -43,7 +44,11 @@ def run_scheduler(jobs, ambulances):
     Jobs that arrive but find nothing eligible free go into a priority
     queue (`pending`) and get retried every time an ambulance frees up or
     another job arrives, instead of being marked unscheduled immediately.
-    """
+        """
+
+def run_scheduler(jobs, ambulances, shift_start):
+    horizon = SHIFT_REFERENCE_START + timedelta(hours=8)
+
     scheduled_jobs = []
     unscheduled_jobs = []
 # loop through every ambulance and create an ambulance state including ambulance.id and available time
@@ -108,7 +113,7 @@ def run_scheduler(jobs, ambulances):
         for priority, call_time, job in held:
             heapq.heappush(pending, (priority, call_time, next(tie), job))
 
-    while events:
+    while events and events[0][0] <= horizon:
         now = events[0][0]
 
         # pull every event sharing this exact timestamp (e.g. several calls
@@ -129,7 +134,7 @@ def run_scheduler(jobs, ambulances):
         try_match(now)
 
     # anything still waiting once every arrival and every ambulance free-up
-    # has been processed never found an eligible ambulance
+    # has been processed found an eligible ambulance
     unscheduled_jobs = [job for *_, job in pending]
 
     return scheduled_jobs, unscheduled_jobs

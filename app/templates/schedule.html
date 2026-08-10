@@ -18,16 +18,7 @@
             <th>End Time</th>
         </tr>
     </thead>
-    <tbody>
-        {% for item in scheduled_jobs %}
-        <tr>
-            <td>{{ item.job.id }}</td>
-            <td>{{ item.job.user_assigned_category }}</td>
-            <td>{{ item.ambulance.id }}</td>
-            <td>{{ item.assigned_start.strftime('%Y-%m-%d %H:%M') }}</td>
-            <td>{{ item.assigned_end.strftime('%Y-%m-%d %H:%M') }}</td>
-        </tr>
-        {% endfor %}
+    <tbody id="scheduled-body">
     </tbody>
 </table>
 
@@ -46,15 +37,53 @@
         {% for job in unscheduled_jobs %}
         <tr>
             <td>{{ job.id }}</td>
-            <td>{{ job.category }}</td>
+            <td>{{ job.user_assigned_category }}</td>
             <td>{{ job.location }}</td>
         </tr>
         {% endfor %}
     </tbody>
 </table>
 
+<script id="scheduled-data" type="application/json">
+[
+{%- for item in scheduled_jobs %}
+{"job_id": {{ item.job.id }}, "category": {{ item.job.user_assigned_category|tojson }}, "ambulance_id": {{ item.ambulance.id }}, "start": {{ item.assigned_start.strftime('%Y-%m-%d %H:%M')|tojson }}, "end": {{ item.assigned_end.strftime('%Y-%m-%d %H:%M')|tojson }}}{{ "," if not loop.last }}
+{%- endfor %}
+]
+</script>
+
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
+    const scheduledJobs = JSON.parse(document.getElementById('scheduled-data').textContent);
+    const scheduledBody = document.getElementById('scheduled-body');
+
+    // reveal one assignment at a time, in the order the scheduler actually
+    // dispatched them, instead of dumping the whole finished simulation in
+    // one go - purely cosmetic, the schedule itself is already computed
+    const REVEAL_INTERVAL_MS = 250;
+    let revealIndex = 0;
+
+    function revealNext() {
+        if (revealIndex >= scheduledJobs.length) {
+            clearInterval(revealTimer);
+            return;
+        }
+        const item = scheduledJobs[revealIndex++];
+        const row = document.createElement('tr');
+        row.className = 'reveal-row';
+        row.innerHTML = `
+            <td>${item.job_id}</td>
+            <td>${item.category}</td>
+            <td>${item.ambulance_id}</td>
+            <td>${item.start}</td>
+            <td>${item.end}</td>
+        `;
+        scheduledBody.appendChild(row);
+    }
+
+    revealNext();
+    const revealTimer = setInterval(revealNext, REVEAL_INTERVAL_MS);
+
     const ctx = document.getElementById('scheduleChart');
 
     new Chart(ctx, {
@@ -80,5 +109,15 @@
         }
     });
 </script>
+
+<style>
+    .reveal-row {
+        animation: fadeIn 0.3s ease-in;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+</style>
 
 {% endblock %}
