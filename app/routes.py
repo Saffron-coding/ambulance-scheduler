@@ -4,7 +4,7 @@ from flask import Blueprint, render_template, request, redirect, url_for, flash
 from app import db
 from app.models import Job, Ambulance
 from app.forms import JobForm, AmbulanceForm
-from scheduling.greedy_based_scheduler import run_scheduler
+from scheduling.agentic_scheduler import run_scheduler
 from app.Utils import locations
 
 main_bp = Blueprint('main', __name__)
