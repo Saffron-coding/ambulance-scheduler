@@ -1,0 +1,67 @@
+episode_id,incident_name,user_assigned_category,call_time,location,lat,lon,patient_age,patient_notes,medical_history,estimated_job_time
+14,asthma attack,C2,2026-03-02T08:00:00,Erdington,52.5209379,-1.8582057,73,slurring words unable to communicate possible stroke,Deep Vein Thrombosis,67.2
+14,stomach pain,C4,2026-03-02T08:00:00,Bournville,52.4247354,-1.9470034,80,labour pain in female 8 months pregnant,Chronic Kidney Disease,126.8
+14,concussion,C3,2026-03-02T08:00:00,Selly Park,52.4418313,-1.928077,46,Hypertension in a 58-year-old male,Coronary Artery Disease,88.51
+14,seizure,C2,2026-03-02T08:01:40.252046,Selly Park,52.4418313,-1.928077,48,severe burns accident with boiling water patient by themselves,Asthma,42.91
+14,asthma attack,C2,2026-03-02T08:03:04.468048,Pype Hayes,52.5154936,-1.8067531,79,"high fever, cold, abdominal pain numbness in hands",Atrial Fibrillation,54.07
+14,stroke,C2,2026-03-02T08:04:54.631690,Northfield,52.4082271,-1.9729107,22,Coronary artery disease in a 65-year-old male,Hyperthyroidism,40.85
+14,concussion,C3,2026-03-02T08:13:10.175834,Selly Park,52.4418313,-1.928077,22,Chronic obstructive pulmonary disease in a 70-year-old,Pulmonary Embolism,96.02
+14,asthma attack,C2,2026-03-02T08:16:53.514257,Erdington,52.5209379,-1.8582057,26,20 year seziure patient recorded history of eplipsy,Coronary Artery Disease,52.01
+14,concussion,C3,2026-03-02T08:34:30.227372,Kings Heath,52.433712,-1.9033817,34,"Anxiety disorder having a panic attack, suicidal thoughts",Peptic Ulcer Disease,43.05
+14,labour pains,C3,2026-03-02T08:45:49.094017,Selly Park,52.4418313,-1.928077,43,patient not breathing,Cirrhosis,95.71
+14,dizziness,C4,2026-03-02T08:51:13.632301,Harborne,52.4611807,-1.9840735,89,no feeling in legs high fever and numbness in hands,Hypertension,110.61
+14,unresponsive patient,C1,2026-03-02T08:58:29.959851,Handsworth Wood,52.5146621,-1.9189267,80,"high fever, cold, abdominal pain numbness in hands",Type 2 Diabetes Mellitus,33.15
+14,Mental health crisis,C4,2026-03-02T09:06:24.330814,Bartley Green,52.4352714,-2.0008842,40,Collapsed in a gym unresponsive,Epilepsy,119.47
+14,alcohol poisoning,C3,2026-03-02T09:34:34.279994,Birmingham city centre,52.4812914,-1.9032447,76,severe burns accident with boiling water patient by themselves,Epilepsy,63.07
+14,chest pain,C2,2026-03-02T09:40:56.167094,Quinton,52.4577337,-2.0062659,23,hard fall 28 patient complaining of possible arm break,Major Depressive Disorder,32.88
+14,concussion,C3,2026-03-02T09:42:05.315613,Handsworth Wood,52.5146621,-1.9189267,76,Chronic obstructive pulmonary disease in a 70-year-old,Parkinson's Disease,44.1
+14,dizziness,C4,2026-03-02T09:43:24.044925,Birmingham city centre,52.4812914,-1.9032447,76,"high fever, cold, abdominal pain numbness in hands",Hyperthyroidism,54.02
+14,stroke,C2,2026-03-02T09:50:15.256130,Moseley,52.445684,-1.8848314,41,patient found on the floor unconscious,Hyperthyroidism,68.12
+14,labour pains,C3,2026-03-02T09:51:12.749775,Handsworth Wood,52.5146621,-1.9189267,53,slurring words unable to communicate possible stroke,Type 2 Diabetes Mellitus,50.7
+14,stomach pain,C4,2026-03-02T09:55:52.619832,Rubery,52.3978566,-2.0391376,51,witness states patient is unable to breath,Pulmonary Embolism,100.53
+14,fall,C3,2026-03-02T09:56:29.789596,Rubery,52.3978566,-2.0391376,44,treated with amlodipine and atorvastatin possible overdose,Epilepsy,63.56
+14,concussion,C3,2026-03-02T10:00:53.442479,Longbridge,52.3911472,-1.985527,68,no feeling in legs high fever and numbness in hands,Chronic Obstructive Pulmonary Disease,55.81
+14,fall,C3,2026-03-02T10:02:00.136559,Bartley Green,52.4352714,-2.0008842,26,diagnosed with anyeresm 10 years ago crushing chest pain,Deep Vein Thrombosis,60.22
+14,stomach pain,C4,2026-03-02T10:08:28.890578,Edgbaston,52.4612105,-1.9290562,81,"Anxiety disorder having a panic attack, suicidal thoughts",Alzheimer's Disease,53.99
+14,asthma attack,C2,2026-03-02T10:11:18.183449,Birmingham city centre,52.4812914,-1.9032447,75,no feeling in legs high fever and numbness in hands,Chronic Kidney Disease,63.58
+14,chest pain,C2,2026-03-02T10:24:27.169772,Acocks Green,52.4464227,-1.8333938,55,Moderate persistent asthma in a 25-year-old male triggered by exercise,Atrial Fibrillation,61.33
+14,seizure,C2,2026-03-02T10:59:55.594580,Kings Heath,52.433712,-1.9033817,30,confused 80 year old migranes and back pain,Breast Cancer,69.88
+14,chest pain,C2,2026-03-02T11:13:49.179867,Great Barr,52.5483541,-1.9422477,34,patient found on the floor unconscious,Epilepsy,52.82
+14,asthma attack,C2,2026-03-02T11:17:30.088965,Stirchley,52.4286323,-1.9271269,83,"high fever, cold, abdominal pain numbness in hands",Epilepsy,42.19
+14,stroke,C2,2026-03-02T11:21:51.829328,Kings Heath,52.433712,-1.9033817,82,Coronary artery disease in a 65-year-old male,Chronic Obstructive Pulmonary Disease,35.45
+14,stroke,C2,2026-03-02T11:38:21.315210,Sparkhill,52.4494221,-1.8733977,43,"Asthma attack, no inhaler struggling to breathe losing consciouness",Iron Deficiency Anaemia,70.96
+14,seizure,C2,2026-03-02T11:54:50.378608,Great Barr,52.5483541,-1.9422477,63,hard fall 28 patient complaining of possible arm break,Hypothyroidism,74.96
+14,asthma attack,C2,2026-03-02T11:56:58.008393,Pype Hayes,52.5154936,-1.8067531,21,abdominal pain and vomiting possible alcohol poisoning,Hyperthyroidism,44.62
+14,heart-attack,C2,2026-03-02T12:01:43.907078,Perry Barr,52.5240612,-1.9233802,57,Coronary artery disease in a 65-year-old male,Atrial Fibrillation,43.52
+14,chest pain,C2,2026-03-02T12:17:31.261402,Handsworth Wood,52.5146621,-1.9189267,67,patient has numbness on right side of arm crush pain possible heart attack,Deep Vein Thrombosis,49.87
+14,chest pain,C2,2026-03-02T12:17:51.781007,Perry Barr,52.5240612,-1.9233802,25,"Asthma attack, no inhaler struggling to breathe losing consciouness",Hypertension,60.71
+14,seizure,C2,2026-03-02T12:19:45.260508,Handsworth Wood,52.5146621,-1.9189267,26,confused 80 year old migranes and back pain,Hypertension,74.39
+14,unresponsive patient,C1,2026-03-02T12:25:18.647194,Handsworth Wood,52.5146621,-1.9189267,47,patient has numbness on right side of arm crush pain possible heart attack,Peptic Ulcer Disease,45.68
+14,fall,C3,2026-03-02T12:58:02.191500,Jewellery Quarter,52.4870169,-1.9203616,34,diagnosed with anyeresm 10 years ago crushing chest pain,Alzheimer's Disease,59.41
+14,concussion,C3,2026-03-02T13:00:12.195584,Harborne,52.4611807,-1.9840735,20,patient not breathing,Hypertension,97.82
+14,stomach pain,C4,2026-03-02T13:00:57.351281,Sheldon,52.4523168,-1.7852712,42,"Anxiety disorder having a panic attack, suicidal thoughts",Cirrhosis,121.13
+14,seizure,C2,2026-03-02T13:39:53.894818,Oscott,52.5468724,-1.8631238,72,Coronary artery disease in a 65-year-old male,Breast Cancer,64.35
+14,stroke,C2,2026-03-02T13:44:27.353426,Castle Vale,52.5154628,-1.7913034,21,Coronary artery disease in a 65-year-old male,Coronary Artery Disease,42.69
+14,respiratory failure,C1,2026-03-02T13:44:46.980212,Walmley,52.5400558,-1.801568,49,patient has numbness on right side of arm crush pain possible heart attack,Breast Cancer,45.77
+14,asthma attack,C2,2026-03-02T13:48:40.373995,Pype Hayes,52.5154936,-1.8067531,49,labour pain in female 8 months pregnant,Hypothyroidism,73.83
+14,heart-attack,C2,2026-03-02T13:59:25.833687,Erdington,52.5209379,-1.8582057,63,diagnosed with anyeresm 10 years ago crushing chest pain,Chronic Obstructive Pulmonary Disease,47.9
+14,stomach pain,C3,2026-03-02T14:08:00.444072,Newtown,52.4965335,-1.9363753,79,slurring words unable to communicate possible stroke,Cirrhosis,88.39
+14,asthma attack,C2,2026-03-02T14:08:38.469517,Castle Vale,52.5154628,-1.7913034,21,confused 80 year old migranes and back pain,Asthma,74.96
+14,stomach pain,C3,2026-03-02T14:31:59.701760,Bartley Green,52.4352714,-2.0008842,78,Coronary artery disease in a 65-year-old male,Chronic Obstructive Pulmonary Disease,63.27
+14,labour pains,C3,2026-03-02T14:35:32.297965,Quinton,52.4577337,-2.0062659,44,Collapsed in a gym unresponsive,Breast Cancer,95.03
+14,dizziness,C4,2026-03-02T14:45:58.739491,Bartley Green,52.4352714,-2.0008842,43,patient found on the floor unconscious,Chronic Kidney Disease,70.02
+14,fall,C3,2026-03-02T14:48:24.669210,Bartley Green,52.4352714,-2.0008842,18,20 year seziure patient recorded history of eplipsy,Hypothyroidism,56.96
+14,asthma attack,C2,2026-03-02T14:52:56.041796,Selly Park,52.4418313,-1.928077,51,labour pain in female 8 months pregnant,Stroke,46.44
+14,alcohol poisoning,C3,2026-03-02T15:02:32.529084,Sparkhill,52.4494221,-1.8733977,60,20 year seziure patient recorded history of eplipsy,Deep Vein Thrombosis,88.27
+14,fall,C3,2026-03-02T15:16:04.651665,Selly Oak,52.4411272,-1.9460187,62,severe burns accident with boiling water patient by themselves,Iron Deficiency Anaemia,62.08
+14,respiratory failure,C1,2026-03-02T15:40:05.955260,Hall Green,52.4351006,-1.8567589,50,cough blood 85 year old man,Obesity,57.8
+14,seizure,C2,2026-03-02T15:45:43.884383,Bournville,52.4247354,-1.9470034,89,severe burns accident with boiling water patient by themselves,Type 2 Diabetes Mellitus,56.0
+14,stroke,C2,2026-03-02T15:47:32.876442,Bartley Green,52.4352714,-2.0008842,25,"high fever, cold, abdominal pain numbness in hands",Pulmonary Embolism,72.04
+14,dizziness,C4,2026-03-02T15:51:32.178779,Sheldon,52.4523168,-1.7852712,28,no feeling in legs high fever and numbness in hands,Parkinson's Disease,126.13
+14,heart-attack,C2,2026-03-02T15:58:14.673704,Northfield,52.4082271,-1.9729107,72,diagnosed with anyeresm 10 years ago crushing chest pain,Type 2 Diabetes Mellitus,67.3
+14,dizziness,C4,2026-03-02T15:59:49.780775,Sparkhill,52.4494221,-1.8733977,35,abdominal pain and vomiting possible alcohol poisoning,Hyperthyroidism,87.67
+14,heart-attack,C2,2026-03-02T16:00:00,Northfield,52.4082271,-1.9729107,35,labour pain in female 8 months pregnant,Iron Deficiency Anaemia,36.74
+14,Mental health crisis,C4,2026-03-02T16:00:00,South Yardley,52.461949,-1.8282055,87,Chronic obstructive pulmonary disease in a 70-year-old,Type 2 Diabetes Mellitus,97.3
+14,labour pains,C3,2026-03-02T16:00:00,Sparkhill,52.4494221,-1.8733977,86,Hypertension in a 58-year-old male,Coronary Artery Disease,61.82
+14,alcohol poisoning,C3,2026-03-02T16:00:00,South Yardley,52.461949,-1.8282055,33,"Asthma attack, no inhaler struggling to breathe losing consciouness",Major Depressive Disorder,90.88
+14,alcohol poisoning,C3,2026-03-02T16:00:00,Sheldon,52.4523168,-1.7852712,23,"Anxiety disorder having a panic attack, suicidal thoughts",Cardiac arrest,59.08

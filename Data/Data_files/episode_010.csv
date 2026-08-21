@@ -1,0 +1,67 @@
+episode_id,incident_name,user_assigned_category,call_time,location,lat,lon,patient_age,patient_notes,medical_history,estimated_job_time
+10,stomach pain,C3,2026-03-02T08:00:00,Edgbaston,52.4612105,-1.9290562,59,"Asthma attack, no inhaler struggling to breathe losing consciouness",Atrial Fibrillation,90.53
+10,dizziness,C4,2026-03-02T08:14:20.155738,Newtown,52.4965335,-1.9363753,59,confused 80 year old migranes and back pain,Major Depressive Disorder,55.91
+10,stomach pain,C4,2026-03-02T08:17:21.511938,Newtown,52.4965335,-1.9363753,82,Coronary artery disease in a 65-year-old male,Peptic Ulcer Disease,85.33
+10,dizziness,C4,2026-03-02T08:28:07.506332,Selly Oak,52.4411272,-1.9460187,22,abdominal pain and vomiting possible alcohol poisoning,Alzheimer's Disease,115.44
+10,stomach pain,C4,2026-03-02T08:28:32.995755,Edgbaston,52.4612105,-1.9290562,90,witness states patient is unable to breath,Deep Vein Thrombosis,61.97
+10,labour pains,C3,2026-03-02T08:29:23.975341,Selly Oak,52.4411272,-1.9460187,56,"Anxiety disorder having a panic attack, suicidal thoughts",Generalised Anxiety Disorder,86.32
+10,labour pains,C3,2026-03-02T08:31:05.528153,Newtown,52.4965335,-1.9363753,57,diagnosed with anyeresm 10 years ago crushing chest pain,Hyperthyroidism,87.43
+10,stomach pain,C4,2026-03-02T08:34:17.558940,Moseley,52.445684,-1.8848314,76,Hypertension in a 58-year-old male,Epilepsy,125.03
+10,concussion,C3,2026-03-02T08:37:09.072046,Newtown,52.4965335,-1.9363753,75,abdominal pain and vomiting possible alcohol poisoning,Iron Deficiency Anaemia,68.79
+10,dizziness,C4,2026-03-02T08:40:07.010974,Newtown,52.4965335,-1.9363753,71,"stabbing pain in stomach, cannot move",Iron Deficiency Anaemia,55.24
+10,fall,C3,2026-03-02T08:54:50.296518,Jewellery Quarter,52.4870169,-1.9203616,62,Coronary artery disease in a 65-year-old male,Generalised Anxiety Disorder,67.41
+10,cardiac arrest,C1,2026-03-02T09:07:34.681585,Oscott,52.5468724,-1.8631238,86,diagnosed with anyeresm 10 years ago crushing chest pain,Alzheimer's Disease,49.69
+10,stroke,C2,2026-03-02T09:09:36.245965,Selly Oak,52.4411272,-1.9460187,35,cough blood 85 year old man,Sepsis,68.7
+10,alcohol poisoning,C3,2026-03-02T09:11:38.331762,Selly Park,52.4418313,-1.928077,58,treated with amlodipine and atorvastatin possible overdose,Type 2 Diabetes Mellitus,67.46
+10,heart-attack,C2,2026-03-02T09:12:26.210473,Acocks Green,52.4464227,-1.8333938,65,"Asthma attack, no inhaler struggling to breathe losing consciouness",Breast Cancer,61.95
+10,asthma attack,C2,2026-03-02T09:29:09.495728,Selly Oak,52.4411272,-1.9460187,76,abdominal pain and vomiting possible alcohol poisoning,Cirrhosis,62.08
+10,heart-attack,C2,2026-03-02T09:29:12.939299,Selly Oak,52.4411272,-1.9460187,71,treated with amlodipine and atorvastatin possible overdose,Deep Vein Thrombosis,45.98
+10,seizure,C2,2026-03-02T09:32:11.404487,Selly Oak,52.4411272,-1.9460187,80,hard fall 28 patient complaining of possible arm break,Asthma,41.25
+10,stomach pain,C4,2026-03-02T09:46:17.978824,Sheldon,52.4523168,-1.7852712,90,"high fever, cold, abdominal pain numbness in hands",Parkinson's Disease,124.91
+10,respiratory failure,C1,2026-03-02T10:05:20.405233,Moseley,52.445684,-1.8848314,35,slurring words unable to communicate possible stroke,Hyperthyroidism,45.47
+10,labour pains,C3,2026-03-02T10:07:21.030533,Moseley,52.445684,-1.8848314,29,cough blood 85 year old man,Hypertension,49.22
+10,asthma attack,C2,2026-03-02T10:08:29.405897,Moseley,52.445684,-1.8848314,26,patient found on the floor unconscious,Breast Cancer,49.53
+10,heart-attack,C2,2026-03-02T10:19:31.611802,Selly Park,52.4418313,-1.928077,21,patient not breathing,Breast Cancer,64.68
+10,asthma attack,C2,2026-03-02T10:42:34.362811,Kings Heath,52.433712,-1.9033817,37,patient not breathing,Obesity,56.57
+10,cardiac arrest,C1,2026-03-02T10:43:03.940892,Acocks Green,52.4464227,-1.8333938,37,diagnosed with anyeresm 10 years ago crushing chest pain,Deep Vein Thrombosis,40.89
+10,chest pain,C2,2026-03-02T10:56:08.877994,Hall Green,52.4351006,-1.8567589,49,hard fall 28 patient complaining of possible arm break,Alzheimer's Disease,56.51
+10,chest pain,C2,2026-03-02T10:56:51.968027,Sparkhill,52.4494221,-1.8733977,67,Collapsed in a gym unresponsive,Hyperthyroidism,56.31
+10,heart-attack,C2,2026-03-02T10:59:50.710189,Moseley,52.445684,-1.8848314,71,patient not breathing,Hypertension,49.74
+10,stroke,C2,2026-03-02T11:02:07.653113,Sparkhill,52.4494221,-1.8733977,84,abdominal pain and vomiting possible alcohol poisoning,Deep Vein Thrombosis,52.49
+10,fall,C3,2026-03-02T11:02:27.637069,Bartley Green,52.4352714,-2.0008842,22,treated with amlodipine and atorvastatin possible overdose,Type 2 Diabetes Mellitus,99.49
+10,stomach pain,C4,2026-03-02T11:15:07.737361,Bartley Green,52.4352714,-2.0008842,76,Type 2 diabetes mellitus in a 62-year-old female light headed,Chronic Obstructive Pulmonary Disease,121.29
+10,stroke,C2,2026-03-02T11:20:01.633363,Walmley,52.5400558,-1.801568,18,hard fall 28 patient complaining of possible arm break,Breast Cancer,43.2
+10,seizure,C2,2026-03-02T11:32:59.431137,Moseley,52.445684,-1.8848314,75,hard fall 28 patient complaining of possible arm break,Parkinson's Disease,41.66
+10,concussion,C3,2026-03-02T12:16:14.864377,Bournville,52.4247354,-1.9470034,60,patient not breathing,Atrial Fibrillation,90.0
+10,labour pains,C3,2026-03-02T12:29:00.708391,Kings Heath,52.433712,-1.9033817,83,confused 80 year old migranes and back pain,Cirrhosis,63.52
+10,alcohol poisoning,C3,2026-03-02T12:30:20.562221,Stirchley,52.4286323,-1.9271269,55,"Anxiety disorder having a panic attack, suicidal thoughts",Pulmonary Embolism,90.96
+10,alcohol poisoning,C3,2026-03-02T12:33:53.975850,Bournville,52.4247354,-1.9470034,23,labour pain in female 8 months pregnant,Deep Vein Thrombosis,85.81
+10,Mental health crisis,C4,2026-03-02T12:36:22.832607,Edgbaston,52.4612105,-1.9290562,84,slurring words unable to communicate possible stroke,Hypothyroidism,61.67
+10,dizziness,C4,2026-03-02T12:44:43.839571,Selly Oak,52.4411272,-1.9460187,24,20 year seziure patient recorded history of eplipsy,Atrial Fibrillation,57.97
+10,stomach pain,C3,2026-03-02T12:49:14.800113,Selly Oak,52.4411272,-1.9460187,78,Collapsed in a gym unresponsive,Chronic Kidney Disease,71.95
+10,unresponsive patient,C1,2026-03-02T12:52:13.968986,Bartley Green,52.4352714,-2.0008842,45,"Anxiety disorder having a panic attack, suicidal thoughts",Hypertension,32.49
+10,fall,C3,2026-03-02T13:09:11.415753,Kings Heath,52.433712,-1.9033817,63,hard fall 28 patient complaining of possible arm break,Pulmonary Embolism,68.57
+10,chest pain,C2,2026-03-02T13:13:57.075254,Kings Heath,52.433712,-1.9033817,64,Collapsed in a gym unresponsive,Peptic Ulcer Disease,71.38
+10,labour pains,C3,2026-03-02T13:26:47.982792,Jewellery Quarter,52.4870169,-1.9203616,37,labour pain in female 8 months pregnant,Epilepsy,91.78
+10,heart-attack,C2,2026-03-02T13:36:32.133386,Acocks Green,52.4464227,-1.8333938,44,slurring words unable to communicate possible stroke,Deep Vein Thrombosis,48.38
+10,heart-attack,C2,2026-03-02T13:46:43.253222,Moseley,52.445684,-1.8848314,88,no feeling in legs high fever and numbness in hands,Chronic Obstructive Pulmonary Disease,74.16
+10,Mental health crisis,C4,2026-03-02T13:58:20.043391,Edgbaston,52.4612105,-1.9290562,85,patient found on the floor unconscious,Asthma,82.02
+10,respiratory failure,C1,2026-03-02T14:06:02.018203,Hall Green,52.4351006,-1.8567589,44,diagnosed with anyeresm 10 years ago crushing chest pain,Breast Cancer,59.99
+10,stomach pain,C3,2026-03-02T14:08:03.518717,Kings Heath,52.433712,-1.9033817,45,patient has numbness on right side of arm crush pain possible heart attack,Generalised Anxiety Disorder,44.19
+10,labour pains,C3,2026-03-02T14:18:20.674501,Selly Park,52.4418313,-1.928077,26,"Anxiety disorder having a panic attack, suicidal thoughts",Parkinson's Disease,84.96
+10,seizure,C2,2026-03-02T14:19:25.263493,Kings Heath,52.433712,-1.9033817,72,cough blood 85 year old man,Breast Cancer,63.46
+10,chest pain,C2,2026-03-02T14:25:35.269607,Sparkhill,52.4494221,-1.8733977,79,patient found on the floor unconscious,Chronic Obstructive Pulmonary Disease,73.31
+10,asthma attack,C2,2026-03-02T14:27:59.748728,Stirchley,52.4286323,-1.9271269,57,Type 2 diabetes mellitus in a 62-year-old female light headed,Parkinson's Disease,35.7
+10,chest pain,C2,2026-03-02T14:48:31.335639,Four Oaks,52.5864368,-1.8420917,36,patient found on the floor unconscious,Peptic Ulcer Disease,57.42
+10,stroke,C2,2026-03-02T15:00:29.033552,Oscott,52.5468724,-1.8631238,24,"high fever, cold, abdominal pain numbness in hands",Cirrhosis,56.02
+10,stomach pain,C3,2026-03-02T15:12:44.805947,Acocks Green,52.4464227,-1.8333938,39,patient not breathing,Cirrhosis,62.58
+10,asthma attack,C2,2026-03-02T15:31:07.719084,Edgbaston,52.4612105,-1.9290562,49,"high fever, cold, abdominal pain numbness in hands",Stroke,36.46
+10,respiratory failure,C1,2026-03-02T15:31:20.539106,Pype Hayes,52.5154936,-1.8067531,59,Collapsed in a gym unresponsive,Pulmonary Embolism,31.0
+10,chest pain,C2,2026-03-02T15:33:04.804432,Jewellery Quarter,52.4870169,-1.9203616,40,abdominal pain and vomiting possible alcohol poisoning,Sepsis,45.64
+10,respiratory failure,C1,2026-03-02T15:41:25.481856,Northfield,52.4082271,-1.9729107,74,20 year seziure patient recorded history of eplipsy,Generalised Anxiety Disorder,27.09
+10,heart-attack,C2,2026-03-02T15:43:26.365586,Stirchley,52.4286323,-1.9271269,41,confused 80 year old migranes and back pain,Pulmonary Embolism,38.56
+10,respiratory failure,C1,2026-03-02T15:49:07.803385,Handsworth Wood,52.5146621,-1.9189267,20,labour pain in female 8 months pregnant,Epilepsy,36.88
+10,asthma attack,C2,2026-03-02T15:51:15.482056,Perry Barr,52.5240612,-1.9233802,84,witness states patient is unable to breath,Pulmonary Embolism,73.24
+10,seizure,C2,2026-03-02T15:51:46.493663,Jewellery Quarter,52.4870169,-1.9203616,23,hard fall 28 patient complaining of possible arm break,Major Depressive Disorder,40.92
+10,asthma attack,C2,2026-03-02T15:58:37.674984,Selly Park,52.4418313,-1.928077,75,"stabbing pain in stomach, cannot move",Cardiac arrest,74.37
+10,unresponsive patient,C1,2026-03-02T16:00:00,Selly Park,52.4418313,-1.928077,83,cough blood 85 year old man,Peptic Ulcer Disease,31.8

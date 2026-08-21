@@ -11,7 +11,7 @@ FLEET = [
     ("Double Crewed Ambulance", "ALS"),
     ("Double Crewed Ambulance", "ALS"),
     ("Double Crewed Ambulance", "BLS"),
-    ("Double Crewed AmbulanceA", "BLS"),
+    ("Double Crewed Ambulance", "BLS"),
     ("Double Crewed Ambulance", "ILS"),
     ("Double Crewed Ambulance", "ILS"),
     ("Patient Transport Service", "BLS"),

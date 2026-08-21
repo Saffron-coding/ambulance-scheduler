@@ -48,7 +48,7 @@
 [
 {%- for item in scheduled_jobs %}
 {"job_id": {{ item.job.id }}, "category": {{ item.job.user_assigned_category|tojson }}, "ambulance_id": {{ item.ambulance.id }}, "start": {{ item.assigned_start.strftime('%Y-%m-%d %H:%M')|tojson }}, "end": {{ item.assigned_end.strftime('%Y-%m-%d %H:%M')|tojson }}}{{ "," if not loop.last }}
-{%- endfor %}
+{% endfor %}
 ]
 </script>
 

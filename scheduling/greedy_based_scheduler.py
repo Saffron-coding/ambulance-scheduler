@@ -6,6 +6,8 @@ from app.Allocation_reason import persist_allocations, downgrade_cost
 from app.models import Allocation
 from app import db
 
+Schedule_type = 'greedy'
+
 SHIFT_REFERENCE_START = datetime(2026, 3, 2, 8, 0, 0)
 
 category_requirements = {

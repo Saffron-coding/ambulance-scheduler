@@ -1,0 +1,67 @@
+episode_id,incident_name,user_assigned_category,call_time,location,lat,lon,patient_age,patient_notes,medical_history,estimated_job_time
+4,unresponsive patient,C1,2026-03-02T08:05:02.590401,Quinton,52.4577337,-2.0062659,36,Moderate persistent asthma in a 25-year-old male triggered by exercise,Generalised Anxiety Disorder,33.72
+4,stroke,C2,2026-03-02T08:14:26.380206,Kingstanding,52.5499565,-1.8860854,54,"high fever, cold, abdominal pain numbness in hands",Pulmonary Embolism,35.96
+4,fall,C3,2026-03-02T08:18:42.292514,Longbridge,52.3911472,-1.985527,61,Collapsed in a gym unresponsive,Coronary Artery Disease,81.8
+4,dizziness,C4,2026-03-02T08:27:44.080460,Oscott,52.5468724,-1.8631238,56,patient found on the floor unconscious,Deep Vein Thrombosis,51.61
+4,labour pains,C3,2026-03-02T08:32:02.356056,Great Barr,52.5483541,-1.9422477,59,"Anxiety disorder having a panic attack, suicidal thoughts",Pulmonary Embolism,71.79
+4,Mental health crisis,C4,2026-03-02T08:36:36.803519,Perry Barr,52.5240612,-1.9233802,56,severe burns accident with boiling water patient by themselves,Peptic Ulcer Disease,120.48
+4,chest pain,C2,2026-03-02T08:41:50.422115,Jewellery Quarter,52.4870169,-1.9203616,81,Moderate persistent asthma in a 25-year-old male triggered by exercise,Type 2 Diabetes Mellitus,31.66
+4,fall,C3,2026-03-02T08:44:58.881759,Perry Barr,52.5240612,-1.9233802,40,confused 80 year old migranes and back pain,Obesity,80.52
+4,stomach pain,C4,2026-03-02T08:53:54.742190,Kingstanding,52.5499565,-1.8860854,30,Type 2 diabetes mellitus in a 62-year-old female light headed,Atrial Fibrillation,96.73
+4,chest pain,C2,2026-03-02T08:54:23.104235,Jewellery Quarter,52.4870169,-1.9203616,74,slurring words unable to communicate possible stroke,Obesity,31.66
+4,unresponsive patient,C1,2026-03-02T08:59:52.855426,Jewellery Quarter,52.4870169,-1.9203616,37,Collapsed in a gym unresponsive,Type 2 Diabetes Mellitus,44.12
+4,seizure,C2,2026-03-02T09:04:45.007406,Handsworth Wood,52.5146621,-1.9189267,55,no feeling in legs high fever and numbness in hands,Rheumatoid Arthritis,59.32
+4,seizure,C2,2026-03-02T09:51:22.124712,Edgbaston,52.4612105,-1.9290562,19,abdominal pain and vomiting possible alcohol poisoning,Cirrhosis,53.95
+4,respiratory failure,C1,2026-03-02T10:01:20.463631,Kings Heath,52.433712,-1.9033817,55,20 year seziure patient recorded history of eplipsy,Chronic Obstructive Pulmonary Disease,40.38
+4,unresponsive patient,C1,2026-03-02T10:02:43.268762,Newtown,52.4965335,-1.9363753,57,abdominal pain and vomiting possible alcohol poisoning,Pulmonary Embolism,54.18
+4,asthma attack,C2,2026-03-02T10:07:01.597716,Moseley,52.445684,-1.8848314,27,patient has numbness on right side of arm crush pain possible heart attack,Deep Vein Thrombosis,38.61
+4,unresponsive patient,C1,2026-03-02T10:13:43.689196,Harborne,52.4611807,-1.9840735,20,patient has numbness on right side of arm crush pain possible heart attack,Coronary Artery Disease,28.0
+4,unresponsive patient,C1,2026-03-02T10:23:52.285486,Moseley,52.445684,-1.8848314,28,patient has numbness on right side of arm crush pain possible heart attack,Parkinson's Disease,48.63
+4,labour pains,C3,2026-03-02T10:34:29.135036,Sheldon,52.4523168,-1.7852712,20,abdominal pain and vomiting possible alcohol poisoning,Rheumatoid Arthritis,95.91
+4,asthma attack,C2,2026-03-02T10:39:19.185904,Walmley,52.5400558,-1.801568,26,confused 80 year old migranes and back pain,Epilepsy,58.66
+4,respiratory failure,C1,2026-03-02T10:48:11.951066,Kingstanding,52.5499565,-1.8860854,87,patient found on the floor unconscious,Cirrhosis,30.9
+4,stroke,C2,2026-03-02T11:07:39.222579,Four Oaks,52.5864368,-1.8420917,47,no feeling in legs high fever and numbness in hands,Atrial Fibrillation,74.36
+4,stroke,C2,2026-03-02T11:10:06.143722,Stirchley,52.4286323,-1.9271269,66,Collapsed in a gym unresponsive,Atrial Fibrillation,44.91
+4,cardiac arrest,C1,2026-03-02T11:13:25.006120,Yardley,52.4690654,-1.8077357,46,"Asthma attack, no inhaler struggling to breathe losing consciouness",Hyperthyroidism,37.61
+4,asthma attack,C2,2026-03-02T11:22:26.211199,Walmley,52.5400558,-1.801568,33,"Anxiety disorder having a panic attack, suicidal thoughts",Atrial Fibrillation,46.72
+4,heart-attack,C2,2026-03-02T11:26:16.646879,Walmley,52.5400558,-1.801568,27,diagnosed with anyeresm 10 years ago crushing chest pain,Deep Vein Thrombosis,65.93
+4,alcohol poisoning,C3,2026-03-02T11:38:12.891297,Sparkhill,52.4494221,-1.8733977,69,labour pain in female 8 months pregnant,Deep Vein Thrombosis,41.68
+4,stomach pain,C3,2026-03-02T11:41:20.072048,Acocks Green,52.4464227,-1.8333938,88,severe burns accident with boiling water patient by themselves,Hyperthyroidism,55.74
+4,seizure,C2,2026-03-02T11:41:41.445280,Oscott,52.5468724,-1.8631238,32,abdominal pain and vomiting possible alcohol poisoning,Cirrhosis,57.04
+4,stomach pain,C4,2026-03-02T11:46:31.508154,Sheldon,52.4523168,-1.7852712,74,slurring words unable to communicate possible stroke,Iron Deficiency Anaemia,51.05
+4,alcohol poisoning,C3,2026-03-02T11:47:57.395429,Castle Vale,52.5154628,-1.7913034,57,confused 80 year old migranes and back pain,Rheumatoid Arthritis,76.01
+4,stroke,C2,2026-03-02T11:58:17.860269,South Yardley,52.461949,-1.8282055,29,Collapsed in a gym unresponsive,Major Depressive Disorder,60.23
+4,dizziness,C4,2026-03-02T12:02:21.534880,Oscott,52.5468724,-1.8631238,54,witness states patient is unable to breath,Epilepsy,96.08
+4,chest pain,C2,2026-03-02T12:04:05.345542,South Yardley,52.461949,-1.8282055,78,Coronary artery disease in a 65-year-old male,Asthma,72.51
+4,Mental health crisis,C4,2026-03-02T12:07:07.298081,Rubery,52.3978566,-2.0391376,56,labour pain in female 8 months pregnant,Major Depressive Disorder,63.62
+4,alcohol poisoning,C3,2026-03-02T12:09:37.719837,Acocks Green,52.4464227,-1.8333938,57,Hypertension in a 58-year-old male,Sepsis,55.47
+4,stroke,C2,2026-03-02T12:15:47.263536,Yardley,52.4690654,-1.8077357,45,patient found on the floor unconscious,Pulmonary Embolism,66.3
+4,alcohol poisoning,C3,2026-03-02T12:23:39.665450,Kingstanding,52.5499565,-1.8860854,35,slurring words unable to communicate possible stroke,Asthma,76.34
+4,stroke,C2,2026-03-02T12:24:04.065750,Perry Barr,52.5240612,-1.9233802,73,"stabbing pain in stomach, cannot move",Iron Deficiency Anaemia,44.43
+4,Mental health crisis,C4,2026-03-02T12:28:46.788647,Kingstanding,52.5499565,-1.8860854,18,"stabbing pain in stomach, cannot move",Hyperthyroidism,62.46
+4,labour pains,C3,2026-03-02T12:30:06.164932,Acocks Green,52.4464227,-1.8333938,48,Hypertension in a 58-year-old male,Alzheimer's Disease,47.96
+4,chest pain,C2,2026-03-02T12:31:20.083625,Jewellery Quarter,52.4870169,-1.9203616,26,slurring words unable to communicate possible stroke,Epilepsy,58.58
+4,chest pain,C2,2026-03-02T12:40:28.826007,Newtown,52.4965335,-1.9363753,53,no feeling in legs high fever and numbness in hands,Iron Deficiency Anaemia,57.69
+4,stroke,C2,2026-03-02T12:41:50.014437,Birmingham city centre,52.4812914,-1.9032447,73,cough blood 85 year old man,Atrial Fibrillation,40.5
+4,unresponsive patient,C1,2026-03-02T12:52:40.389996,Handsworth Wood,52.5146621,-1.9189267,40,"stabbing pain in stomach, cannot move",Coronary Artery Disease,47.93
+4,heart-attack,C2,2026-03-02T12:54:29.934590,Handsworth Wood,52.5146621,-1.9189267,23,cough blood 85 year old man,Pulmonary Embolism,74.89
+4,stomach pain,C4,2026-03-02T12:59:56.222978,Oscott,52.5468724,-1.8631238,82,cough blood 85 year old man,Deep Vein Thrombosis,99.4
+4,heart-attack,C2,2026-03-02T13:48:12.490348,Jewellery Quarter,52.4870169,-1.9203616,68,Collapsed in a gym unresponsive,Coronary Artery Disease,64.51
+4,chest pain,C2,2026-03-02T13:53:48.943232,Handsworth Wood,52.5146621,-1.9189267,59,patient not breathing,Major Depressive Disorder,55.44
+4,labour pains,C3,2026-03-02T14:00:37.675616,Hall Green,52.4351006,-1.8567589,22,hard fall 28 patient complaining of possible arm break,Asthma,47.31
+4,chest pain,C2,2026-03-02T14:03:57.850110,Perry Barr,52.5240612,-1.9233802,61,patient has numbness on right side of arm crush pain possible heart attack,Breast Cancer,51.21
+4,stroke,C2,2026-03-02T14:20:25.222244,Handsworth Wood,52.5146621,-1.9189267,61,labour pain in female 8 months pregnant,Obesity,33.35
+4,stomach pain,C4,2026-03-02T14:27:35.240148,Northfield,52.4082271,-1.9729107,45,patient found on the floor unconscious,Epilepsy,123.79
+4,alcohol poisoning,C3,2026-03-02T14:31:38.410674,Bournville,52.4247354,-1.9470034,67,confused 80 year old migranes and back pain,Deep Vein Thrombosis,64.16
+4,heart-attack,C2,2026-03-02T14:39:00.957370,Birmingham city centre,52.4812914,-1.9032447,81,labour pain in female 8 months pregnant,Asthma,49.35
+4,heart-attack,C2,2026-03-02T14:42:40.005427,Birmingham city centre,52.4812914,-1.9032447,46,Collapsed in a gym unresponsive,Stroke,58.0
+4,fall,C3,2026-03-02T14:43:40.807378,Harborne,52.4611807,-1.9840735,68,no feeling in legs high fever and numbness in hands,Peptic Ulcer Disease,92.67
+4,asthma attack,C2,2026-03-02T14:45:16.864936,Newtown,52.4965335,-1.9363753,82,Hypertension in a 58-year-old male,Peptic Ulcer Disease,37.56
+4,stomach pain,C4,2026-03-02T15:07:58.699902,Kingstanding,52.5499565,-1.8860854,31,"high fever, cold, abdominal pain numbness in hands",Cirrhosis,53.06
+4,stomach pain,C3,2026-03-02T15:12:01.979729,Quinton,52.4577337,-2.0062659,78,"Asthma attack, no inhaler struggling to breathe losing consciouness",Cardiac arrest,41.58
+4,fall,C3,2026-03-02T15:20:55.871813,Selly Oak,52.4411272,-1.9460187,80,"Anxiety disorder having a panic attack, suicidal thoughts",Stroke,76.49
+4,fall,C3,2026-03-02T15:33:42.119228,Harborne,52.4611807,-1.9840735,56,witness states patient is unable to breath,Asthma,45.11
+4,asthma attack,C2,2026-03-02T15:35:57.234541,Acocks Green,52.4464227,-1.8333938,59,no feeling in legs high fever and numbness in hands,Deep Vein Thrombosis,39.46
+4,seizure,C2,2026-03-02T15:47:56.745142,Walmley,52.5400558,-1.801568,83,patient has numbness on right side of arm crush pain possible heart attack,Hyperthyroidism,61.08
+4,stroke,C2,2026-03-02T15:53:58.386502,Roughley,52.5913569,-1.8193277,28,Type 2 diabetes mellitus in a 62-year-old female light headed,Cirrhosis,31.94
+4,Mental health crisis,C4,2026-03-02T15:58:17.448578,South Yardley,52.461949,-1.8282055,66,hard fall 28 patient complaining of possible arm break,Atrial Fibrillation,116.7

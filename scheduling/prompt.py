@@ -78,7 +78,7 @@ def choose_ambulance(job, candidates):
 
         _, eta = get_eta(chosen.lat, chosen.lon, job.lat, job.lon)
         return chosen, eta, reason, False
-
+#use greedy if LLM fails
     except Exception as e:
         print("RAW LLM REPLY:", repr(msg.content[0].text))
         # Fallback: nearest eligible, flagged as a reliability event.

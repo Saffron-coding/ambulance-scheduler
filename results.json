@@ -1,0 +1,303 @@
+[
+  {
+    "episode_id": 1,
+    "Schedule_type": "agentic",
+    "Scheduled": 61,
+    "Unscheduled": 5,
+    "response": 1817.6341866166667,
+    "unserved": 8.0,
+    "fairness": 60.14555684557639,
+    "downgrade": 38.0
+  },
+  {
+    "episode_id": 1,
+    "Schedule_type": "greedy",
+    "Scheduled": 59,
+    "Unscheduled": 7,
+    "response": 1776.2339884166668,
+    "unserved": 14.0,
+    "fairness": 85.44430233580756,
+    "downgrade": 37.0
+  },
+  {
+    "episode_id": 2,
+    "Schedule_type": "agentic",
+    "Scheduled": 61,
+    "Unscheduled": 5,
+    "response": 2398.8002673833334,
+    "unserved": 16.0,
+    "fairness": 44.976520835278954,
+    "downgrade": 39.0
+  },
+  {
+    "episode_id": 2,
+    "Schedule_type": "greedy",
+    "Scheduled": 60,
+    "Unscheduled": 6,
+    "response": 2695.7406802500004,
+    "unserved": 19.0,
+    "fairness": 47.836284492522914,
+    "downgrade": 38.0
+  },
+  {
+    "episode_id": 3,
+    "Schedule_type": "greedy",
+    "Scheduled": 61,
+    "Unscheduled": 5,
+    "response": 2463.770190366667,
+    "unserved": 5.0,
+    "fairness": 43.327229389975656,
+    "downgrade": 52.0
+  },
+  {
+    "episode_id": 3,
+    "Schedule_type": "agentic",
+    "Scheduled": 61,
+    "Unscheduled": 5,
+    "response": 2478.4235135500003,
+    "unserved": 5.0,
+    "fairness": 44.379779384104864,
+    "downgrade": 49.0
+  },
+  {
+    "episode_id": 4,
+    "Schedule_type": "agentic",
+    "Scheduled": 63,
+    "Unscheduled": 3,
+    "response": 1775.8394808166663,
+    "unserved": 5.0,
+    "fairness": 45.86946795973428,
+    "downgrade": 40.0
+  },
+  {
+    "episode_id": 4,
+    "Schedule_type": "greedy",
+    "Scheduled": 61,
+    "Unscheduled": 5,
+    "response": 1763.0180698500003,
+    "unserved": 9.0,
+    "fairness": 59.669520632915955,
+    "downgrade": 40.0
+  },
+  {
+    "episode_id": 5,
+    "Schedule_type": "greedy",
+    "Scheduled": 53,
+    "Unscheduled": 13,
+    "response": 2154.5551220666666,
+    "unserved": 22.0,
+    "fairness": 59.59808921447507,
+    "downgrade": 45.0
+  },
+  {
+    "episode_id": 5,
+    "Schedule_type": "agentic",
+    "Scheduled": 51,
+    "Unscheduled": 15,
+    "response": 2272.2580674666665,
+    "unserved": 27.0,
+    "fairness": 52.79188605323596,
+    "downgrade": 42.0
+  },
+  {
+    "episode_id": 6,
+    "Schedule_type": "agentic",
+    "Scheduled": 60,
+    "Unscheduled": 6,
+    "response": 2594.18149865,
+    "unserved": 7.0,
+    "fairness": 69.5825661645903,
+    "downgrade": 38.0
+  },
+  {
+    "episode_id": 6,
+    "Schedule_type": "greedy",
+    "Scheduled": 60,
+    "Unscheduled": 6,
+    "response": 2676.9265200333334,
+    "unserved": 7.0,
+    "fairness": 81.43761587459964,
+    "downgrade": 39.0
+  },
+  {
+    "episode_id": 7,
+    "Schedule_type": "greedy",
+    "Scheduled": 62,
+    "Unscheduled": 4,
+    "response": 2636.5240705500005,
+    "unserved": 4.0,
+    "fairness": 73.35060492576191,
+    "downgrade": 45.0
+  },
+  {
+    "episode_id": 7,
+    "Schedule_type": "agentic",
+    "Scheduled": 62,
+    "Unscheduled": 4,
+    "response": 2673.1833785833337,
+    "unserved": 4.0,
+    "fairness": 73.47709591970406,
+    "downgrade": 44.0
+  },
+  {
+    "episode_id": 8,
+    "Schedule_type": "agentic",
+    "Scheduled": 64,
+    "Unscheduled": 2,
+    "response": 1227.04690035,
+    "unserved": 2.0,
+    "fairness": 42.433540608757156,
+    "downgrade": 52.0
+  },
+  {
+    "episode_id": 8,
+    "Schedule_type": "greedy",
+    "Scheduled": 63,
+    "Unscheduled": 3,
+    "response": 1938.3119033166672,
+    "unserved": 3.0,
+    "fairness": 43.59915658066627,
+    "downgrade": 56.0
+  },
+  {
+    "episode_id": 9,
+    "Schedule_type": "greedy",
+    "Scheduled": 65,
+    "Unscheduled": 1,
+    "response": 2127.605133033333,
+    "unserved": 2.0,
+    "fairness": 44.11833549979791,
+    "downgrade": 53.0
+  },
+  {
+    "episode_id": 9,
+    "Schedule_type": "agentic",
+    "Scheduled": 65,
+    "Unscheduled": 1,
+    "response": 3056.4480761833333,
+    "unserved": 2.0,
+    "fairness": 44.78940444360947,
+    "downgrade": 50.0
+  },
+  {
+    "episode_id": 10,
+    "Schedule_type": "agentic",
+    "Scheduled": 61,
+    "Unscheduled": 5,
+    "response": 2490.0058655166663,
+    "unserved": 16.0,
+    "fairness": 45.129055363662644,
+    "downgrade": 45.0
+  },
+  {
+    "episode_id": 10,
+    "Schedule_type": "greedy",
+    "Scheduled": 60,
+    "Unscheduled": 6,
+    "response": 2295.5146666500004,
+    "unserved": 20.0,
+    "fairness": 42.14689430045295,
+    "downgrade": 45.0
+  },
+  {
+    "episode_id": 11,
+    "Schedule_type": "greedy",
+    "Scheduled": 54,
+    "Unscheduled": 12,
+    "response": 1691.8040023333333,
+    "unserved": 29.0,
+    "fairness": 66.06941980264283,
+    "downgrade": 43.0
+  },
+  {
+    "episode_id": 11,
+    "Schedule_type": "agentic",
+    "Scheduled": 54,
+    "Unscheduled": 12,
+    "response": 1411.5696257500001,
+    "unserved": 29.0,
+    "fairness": 60.63399287991829,
+    "downgrade": 41.0
+  },
+  {
+    "episode_id": 12,
+    "Schedule_type": "agentic",
+    "Scheduled": 60,
+    "Unscheduled": 6,
+    "response": 1195.2951510833332,
+    "unserved": 13.0,
+    "fairness": 36.278432975716505,
+    "downgrade": 47.0
+  },
+  {
+    "episode_id": 12,
+    "Schedule_type": "greedy",
+    "Scheduled": 60,
+    "Unscheduled": 6,
+    "response": 1701.0474273,
+    "unserved": 10.0,
+    "fairness": 35.30203903927616,
+    "downgrade": 47.0
+  },
+  {
+    "episode_id": 13,
+    "Schedule_type": "greedy",
+    "Scheduled": 63,
+    "Unscheduled": 3,
+    "response": 2611.17403555,
+    "unserved": 3.0,
+    "fairness": 58.89665424276437,
+    "downgrade": 49.0
+  },
+  {
+    "episode_id": 13,
+    "Schedule_type": "agentic",
+    "Scheduled": 63,
+    "Unscheduled": 3,
+    "response": 2312.5845273333334,
+    "unserved": 5.0,
+    "fairness": 42.06170477125794,
+    "downgrade": 47.0
+  },
+  {
+    "episode_id": 14,
+    "Schedule_type": "agentic",
+    "Scheduled": 60,
+    "Unscheduled": 6,
+    "response": 806.6242430833333,
+    "unserved": 15.0,
+    "fairness": 30.88361800626709,
+    "downgrade": 44.0
+  },
+  {
+    "episode_id": 14,
+    "Schedule_type": "greedy",
+    "Scheduled": 60,
+    "Unscheduled": 6,
+    "response": 1014.8301186166666,
+    "unserved": 14.0,
+    "fairness": 37.87673893125061,
+    "downgrade": 48.0
+  },
+  {
+    "episode_id": 15,
+    "Schedule_type": "greedy",
+    "Scheduled": 59,
+    "Unscheduled": 7,
+    "response": 3110.3519031666665,
+    "unserved": 9.0,
+    "fairness": 48.77283349984196,
+    "downgrade": 42.0
+  },
+  {
+    "episode_id": 15,
+    "Schedule_type": "agentic",
+    "Scheduled": 60,
+    "Unscheduled": 6,
+    "response": 2389.034603266666,
+    "unserved": 8.0,
+    "fairness": 34.58425634268952,
+    "downgrade": 41.0
+  }
+
+]

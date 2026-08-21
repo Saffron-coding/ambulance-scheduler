@@ -3,9 +3,11 @@ import heapq
 from itertools import count
 from app.Utils.distance import get_eta, find_closest_ambulance
 from app.Allocation_reason import persist_allocations, downgrade_cost
-from app.models import Allocation
+from app.models import *
 from app import db
 from scheduling.prompt import choose_ambulance
+
+Schedule_type = 'agentic'
 
 SHIFT_REFERENCE_START = datetime(2026, 3, 2, 8, 0, 0)
 

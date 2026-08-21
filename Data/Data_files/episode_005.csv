@@ -1,0 +1,67 @@
+episode_id,incident_name,user_assigned_category,call_time,location,lat,lon,patient_age,patient_notes,medical_history,estimated_job_time
+5,fall,C3,2026-03-02T08:04:47.104175,Moseley,52.445684,-1.8848314,58,"high fever, cold, abdominal pain numbness in hands",Deep Vein Thrombosis,69.37
+5,alcohol poisoning,C3,2026-03-02T08:10:27.542824,Rubery,52.3978566,-2.0391376,69,patient found on the floor unconscious,Hyperthyroidism,87.26
+5,alcohol poisoning,C3,2026-03-02T08:40:49.376834,Northfield,52.4082271,-1.9729107,41,abdominal pain and vomiting possible alcohol poisoning,Obesity,82.28
+5,labour pains,C3,2026-03-02T08:43:10.740533,Bournville,52.4247354,-1.9470034,43,diagnosed with anyeresm 10 years ago crushing chest pain,Sepsis,54.77
+5,stomach pain,C3,2026-03-02T09:11:52.224165,South Yardley,52.461949,-1.8282055,41,slurring words unable to communicate possible stroke,Atrial Fibrillation,44.03
+5,stomach pain,C3,2026-03-02T09:19:06.054752,Bournville,52.4247354,-1.9470034,18,Collapsed in a gym unresponsive,Breast Cancer,82.46
+5,seizure,C2,2026-03-02T09:43:07.396771,Sheldon,52.4523168,-1.7852712,33,patient found on the floor unconscious,Sepsis,35.67
+5,respiratory failure,C1,2026-03-02T09:58:19.273909,Yardley,52.4690654,-1.8077357,19,abdominal pain and vomiting possible alcohol poisoning,Hyperthyroidism,44.61
+5,stroke,C2,2026-03-02T10:00:49.844684,Sheldon,52.4523168,-1.7852712,37,"stabbing pain in stomach, cannot move",Alzheimer's Disease,43.19
+5,stomach pain,C3,2026-03-02T10:06:21.505622,Northfield,52.4082271,-1.9729107,48,Coronary artery disease in a 65-year-old male,Sepsis,57.01
+5,stomach pain,C4,2026-03-02T10:35:09.844165,Sheldon,52.4523168,-1.7852712,30,Moderate persistent asthma in a 25-year-old male triggered by exercise,Coronary Artery Disease,102.27
+5,stomach pain,C4,2026-03-02T11:00:26.881028,Kings Heath,52.433712,-1.9033817,57,abdominal pain and vomiting possible alcohol poisoning,Alzheimer's Disease,61.46
+5,stomach pain,C3,2026-03-02T11:03:57.817363,Selly Park,52.4418313,-1.928077,66,slurring words unable to communicate possible stroke,Rheumatoid Arthritis,98.6
+5,fall,C3,2026-03-02T11:06:06.313723,Sparkhill,52.4494221,-1.8733977,47,Coronary artery disease in a 65-year-old male,Asthma,87.51
+5,heart-attack,C2,2026-03-02T11:09:50.685095,Kings Heath,52.433712,-1.9033817,22,patient not breathing,Atrial Fibrillation,39.11
+5,Mental health crisis,C4,2026-03-02T11:13:37.007886,Selly Park,52.4418313,-1.928077,66,20 year seziure patient recorded history of eplipsy,Obesity,126.58
+5,dizziness,C4,2026-03-02T11:13:42.577758,Sparkhill,52.4494221,-1.8733977,69,severe burns accident with boiling water patient by themselves,Obesity,53.91
+5,concussion,C3,2026-03-02T11:16:49.062643,Hall Green,52.4351006,-1.8567589,67,Type 2 diabetes mellitus in a 62-year-old female light headed,Deep Vein Thrombosis,75.64
+5,dizziness,C4,2026-03-02T11:29:16.065913,Selly Park,52.4418313,-1.928077,62,"high fever, cold, abdominal pain numbness in hands",Hypertension,80.55
+5,Mental health crisis,C4,2026-03-02T11:42:38.028564,Moseley,52.445684,-1.8848314,32,severe burns accident with boiling water patient by themselves,Coronary Artery Disease,129.52
+5,stroke,C2,2026-03-02T11:50:37.476389,Four Oaks,52.5864368,-1.8420917,31,"Asthma attack, no inhaler struggling to breathe losing consciouness",Hypertension,54.39
+5,stomach pain,C4,2026-03-02T12:08:35.997325,Bournville,52.4247354,-1.9470034,26,patient has numbness on right side of arm crush pain possible heart attack,Hypertension,105.57
+5,respiratory failure,C1,2026-03-02T12:24:04.098504,Handsworth Wood,52.5146621,-1.9189267,88,no feeling in legs high fever and numbness in hands,Pulmonary Embolism,34.47
+5,fall,C3,2026-03-02T12:35:08.895564,Kingstanding,52.5499565,-1.8860854,29,diagnosed with anyeresm 10 years ago crushing chest pain,Hypothyroidism,75.64
+5,concussion,C3,2026-03-02T12:36:00.408553,Edgbaston,52.4612105,-1.9290562,67,abdominal pain and vomiting possible alcohol poisoning,Peptic Ulcer Disease,80.94
+5,Mental health crisis,C4,2026-03-02T12:36:03.478737,Selly Oak,52.4411272,-1.9460187,34,patient not breathing,Hypertension,70.19
+5,alcohol poisoning,C3,2026-03-02T12:41:02.126672,Bournville,52.4247354,-1.9470034,36,Type 2 diabetes mellitus in a 62-year-old female light headed,Obesity,81.71
+5,stroke,C2,2026-03-02T12:49:28.065866,Newtown,52.4965335,-1.9363753,62,"stabbing pain in stomach, cannot move",Rheumatoid Arthritis,45.75
+5,stroke,C2,2026-03-02T12:56:26.347118,Kingstanding,52.5499565,-1.8860854,57,Type 2 diabetes mellitus in a 62-year-old female light headed,Cardiac arrest,46.27
+5,stomach pain,C3,2026-03-02T12:58:43.238747,Selly Oak,52.4411272,-1.9460187,42,patient found on the floor unconscious,Rheumatoid Arthritis,86.7
+5,stroke,C2,2026-03-02T13:03:17.040819,Edgbaston,52.4612105,-1.9290562,28,"stabbing pain in stomach, cannot move",Breast Cancer,62.87
+5,chest pain,C2,2026-03-02T13:05:55.436883,Jewellery Quarter,52.4870169,-1.9203616,74,Collapsed in a gym unresponsive,Pulmonary Embolism,38.13
+5,heart-attack,C2,2026-03-02T13:16:54.096961,Castle Vale,52.5154628,-1.7913034,53,patient not breathing,Iron Deficiency Anaemia,55.89
+5,respiratory failure,C1,2026-03-02T13:17:23.924066,Roughley,52.5913569,-1.8193277,18,slurring words unable to communicate possible stroke,Obesity,35.52
+5,dizziness,C4,2026-03-02T13:22:33.197244,Handsworth Wood,52.5146621,-1.9189267,79,patient not breathing,Generalised Anxiety Disorder,123.96
+5,chest pain,C2,2026-03-02T13:23:44.603871,Four Oaks,52.5864368,-1.8420917,22,Moderate persistent asthma in a 25-year-old male triggered by exercise,Cirrhosis,31.12
+5,asthma attack,C2,2026-03-02T13:30:06.170373,Bartley Green,52.4352714,-2.0008842,78,treated with amlodipine and atorvastatin possible overdose,Chronic Obstructive Pulmonary Disease,65.34
+5,seizure,C2,2026-03-02T14:00:17.403474,Edgbaston,52.4612105,-1.9290562,36,"Asthma attack, no inhaler struggling to breathe losing consciouness",Atrial Fibrillation,38.94
+5,fall,C3,2026-03-02T14:08:44.404979,Quinton,52.4577337,-2.0062659,45,slurring words unable to communicate possible stroke,Stroke,50.92
+5,dizziness,C4,2026-03-02T14:17:51.997070,Quinton,52.4577337,-2.0062659,65,abdominal pain and vomiting possible alcohol poisoning,Chronic Kidney Disease,80.46
+5,stomach pain,C4,2026-03-02T14:22:05.995170,Bournville,52.4247354,-1.9470034,35,"stabbing pain in stomach, cannot move",Generalised Anxiety Disorder,101.83
+5,asthma attack,C2,2026-03-02T14:29:01.702127,Harborne,52.4611807,-1.9840735,36,diagnosed with anyeresm 10 years ago crushing chest pain,Peptic Ulcer Disease,66.99
+5,heart-attack,C2,2026-03-02T14:29:55.946488,Harborne,52.4611807,-1.9840735,78,"Anxiety disorder having a panic attack, suicidal thoughts",Sepsis,41.28
+5,asthma attack,C2,2026-03-02T14:31:27.316061,Harborne,52.4611807,-1.9840735,51,no feeling in legs high fever and numbness in hands,Cirrhosis,62.22
+5,dizziness,C4,2026-03-02T14:33:53.170054,Walmley,52.5400558,-1.801568,66,witness states patient is unable to breath,Chronic Kidney Disease,73.18
+5,asthma attack,C2,2026-03-02T14:47:39.012549,Quinton,52.4577337,-2.0062659,61,Type 2 diabetes mellitus in a 62-year-old female light headed,Asthma,52.13
+5,heart-attack,C2,2026-03-02T14:50:02.935886,Selly Park,52.4418313,-1.928077,65,patient has numbness on right side of arm crush pain possible heart attack,Type 2 Diabetes Mellitus,49.48
+5,chest pain,C2,2026-03-02T14:53:40.237143,Stirchley,52.4286323,-1.9271269,61,Coronary artery disease in a 65-year-old male,Cirrhosis,54.53
+5,stomach pain,C4,2026-03-02T14:54:28.875798,Longbridge,52.3911472,-1.985527,67,Type 2 diabetes mellitus in a 62-year-old female light headed,Coronary Artery Disease,107.06
+5,respiratory failure,C1,2026-03-02T14:57:04.794648,Selly Park,52.4418313,-1.928077,37,"Anxiety disorder having a panic attack, suicidal thoughts",Stroke,28.86
+5,seizure,C2,2026-03-02T14:57:14.048126,Northfield,52.4082271,-1.9729107,39,"Asthma attack, no inhaler struggling to breathe losing consciouness",Cardiac arrest,73.21
+5,stroke,C2,2026-03-02T14:58:12.513023,Selly Oak,52.4411272,-1.9460187,22,no feeling in legs high fever and numbness in hands,Alzheimer's Disease,46.35
+5,seizure,C2,2026-03-02T15:01:37.583910,Selly Park,52.4418313,-1.928077,34,confused 80 year old migranes and back pain,Rheumatoid Arthritis,34.8
+5,dizziness,C4,2026-03-02T15:02:35.042103,Selly Oak,52.4411272,-1.9460187,74,treated with amlodipine and atorvastatin possible overdose,Coronary Artery Disease,50.14
+5,labour pains,C3,2026-03-02T15:05:15.984992,Quinton,52.4577337,-2.0062659,67,patient has numbness on right side of arm crush pain possible heart attack,Hypertension,61.67
+5,seizure,C2,2026-03-02T15:11:49.862810,Selly Park,52.4418313,-1.928077,86,labour pain in female 8 months pregnant,Type 2 Diabetes Mellitus,40.68
+5,dizziness,C4,2026-03-02T15:13:28.940839,Quinton,52.4577337,-2.0062659,39,Type 2 diabetes mellitus in a 62-year-old female light headed,Alzheimer's Disease,75.09
+5,asthma attack,C2,2026-03-02T15:13:51.677656,Selly Oak,52.4411272,-1.9460187,71,treated with amlodipine and atorvastatin possible overdose,Type 2 Diabetes Mellitus,74.06
+5,chest pain,C2,2026-03-02T15:19:06.091402,Stirchley,52.4286323,-1.9271269,55,treated with amlodipine and atorvastatin possible overdose,Iron Deficiency Anaemia,58.41
+5,stomach pain,C4,2026-03-02T15:24:23.614539,Quinton,52.4577337,-2.0062659,32,severe burns accident with boiling water patient by themselves,Hyperthyroidism,79.91
+5,stroke,C2,2026-03-02T15:31:37.930597,Selly Oak,52.4411272,-1.9460187,40,Hypertension in a 58-year-old male,Pulmonary Embolism,36.7
+5,asthma attack,C2,2026-03-02T15:33:25.041780,Sparkhill,52.4494221,-1.8733977,46,"stabbing pain in stomach, cannot move",Chronic Obstructive Pulmonary Disease,33.77
+5,stomach pain,C4,2026-03-02T15:41:23.923356,Sheldon,52.4523168,-1.7852712,84,patient not breathing,Iron Deficiency Anaemia,129.45
+5,concussion,C3,2026-03-02T15:57:04.662152,Bartley Green,52.4352714,-2.0008842,27,20 year seziure patient recorded history of eplipsy,Epilepsy,54.27
+5,stomach pain,C4,2026-03-02T16:00:00,Harborne,52.4611807,-1.9840735,41,abdominal pain and vomiting possible alcohol poisoning,Epilepsy,93.87
+5,alcohol poisoning,C3,2026-03-02T16:00:00,Edgbaston,52.4612105,-1.9290562,30,patient has numbness on right side of arm crush pain possible heart attack,Hyperthyroidism,70.76

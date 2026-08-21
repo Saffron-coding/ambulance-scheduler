@@ -47,6 +47,7 @@ def score_episode(episode_id, scheduler_type):
     # 4. Equipment downgrade: sum of the per-allocation costs already stored.
     downgrade_penalty = sum(a.equipment_downgrade_cost for a in allocations)
 
+
     return {
         "response": response_penalty,
         "unserved": unserved_penalty,
