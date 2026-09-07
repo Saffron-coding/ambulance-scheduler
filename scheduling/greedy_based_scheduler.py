@@ -41,7 +41,7 @@ def rules_met(job, ambulance, category_requirements):
 """
     Event-driven scheduler.
 
-    This improved scheduler only ever lets a job influence a decision once
+    This scheduler only ever lets a job influence a decision once
     its own call_time has passed, and only reconsiders ambulances at the
     moment they actually become free (or a new job arrives) - the two kinds
     of "events" in the simulation.
@@ -144,9 +144,9 @@ def run_scheduler(jobs, ambulances):
         try_match(now)
 
     # anything still waiting once every arrival and every ambulance free-up
-    # has been processed found an eligible ambulance
+    # store any remaining unscheduled jobs only hold job data
     unscheduled_jobs = [job for *_, job in pending]
-
+#save scheduled jobs to allocation table
     persist_allocations(scheduled_jobs, "greedy")
 
     return scheduled_jobs, unscheduled_jobs

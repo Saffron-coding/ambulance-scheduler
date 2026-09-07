@@ -215,7 +215,7 @@ def generate_episode(seed, num_jobs=50, shift_hours=8, clustered_share=0.7,
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate reproducible ambulance dispatch episodes with clustered contention.")
     parser.add_argument("--seeds", type=int, nargs="+", default=[1], help="one or more seeds, one episode each")
-    parser.add_argument("--num-jobs", type=int, default=50)
+    parser.add_argument("--num-jobs", type=int, default=66)
     parser.add_argument("--shift-hours", type=int, default=8)
     parser.add_argument("--clustered-share", type=float, default=0.7,
                         help="fraction of jobs placed in contention clusters (0-1)")

@@ -6,7 +6,7 @@ from flask import Blueprint, render_template, request, redirect, url_for, flash
 from app import db
 from app.models import Job, Ambulance
 from app.forms import JobForm, AmbulanceForm
-from scheduling.greedy_based_scheduler import run_scheduler
+from scheduling.greedy_based_scheduler import run_scheduler, Schedule_type
 from app.Utils import locations
 import os
 from app.penalty import score_episode
@@ -110,33 +110,33 @@ def add_ambulance():
 
 @main_bp.route('/schedule/<int:episode_id>')
 def schedule(episode_id):
-	jobs = Job.query.filter_by(episode_id=episode_id).all()
-	ambulances = Ambulance.query.all()
+    jobs = Job.query.filter_by(episode_id=episode_id).all()
+    ambulances = Ambulance.query.all()
 
-	scheduled_jobs, unscheduled_jobs = run_scheduler(jobs, ambulances)
-	schedule_score = score_episode(episode_id, Schedule_type)
+    scheduled_jobs, unscheduled_jobs = run_scheduler(jobs, ambulances)
+    schedule_score = score_episode(episode_id, Schedule_type)
 
-	simulation_information = {
-		"episode_id": episode_id,
-		"Schedule_type": Schedule_type,
-		"Scheduled": len(scheduled_jobs),
-		"Unscheduled": len(unscheduled_jobs),
-		"response": schedule_score["response"],
-		"unserved": schedule_score["unserved"],
-		"fairness": schedule_score["fairness"],
-		"downgrade": schedule_score["downgrade"],
-	}
+    simulation_information = {
+        "episode_id": episode_id,
+        "Schedule_type": Schedule_type,
+        "Scheduled": len(scheduled_jobs),
+        "Unscheduled": len(unscheduled_jobs),
+        "response": schedule_score["response"],
+        "unserved": schedule_score["unserved"],
+        "fairness": schedule_score["fairness"],
+        "downgrade": schedule_score["downgrade"],
+    }
 
-	results = []
-	if os.path.exists(Simulation_Results):
-		with open(Simulation_Results) as f:
-			results = json.load(f)
-	results.append(simulation_information)
-	with open(Simulation_Results, 'w') as f:
-		json.dump(results, f, indent=2)
+    results = []
+    if os.path.exists(Simulation_Results):
+        with open(Simulation_Results) as f:
+            results = json.load(f)
+    results.append(simulation_information)
+    with open(Simulation_Results, 'w') as f:
+        json.dump(results, f, indent=2)
 
-	return render_template(
-		'schedule.html',
-		scheduled_jobs=scheduled_jobs,
-		unscheduled_jobs=unscheduled_jobs
-	)
+    return render_template(
+        'schedule.html',
+        scheduled_jobs=scheduled_jobs,
+        unscheduled_jobs=unscheduled_jobs
+    )

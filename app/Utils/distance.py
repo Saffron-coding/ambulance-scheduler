@@ -22,16 +22,16 @@ _cache = None  # loaded lazily, kept in memory for the life of the process
 
 
 def _load_cache():
-	global _cache
-	if _cache is None:
-		if os.path.exists(CACHE_PATH):
-			with open(CACHE_PATH) as f:
-				_cache = json.load(f)
-		else:
-			_cache = {}
-			_save_cache()
+    global _cache
+    if _cache is None:
+        if os.path.exists(CACHE_PATH):
+            with open(CACHE_PATH) as f:
+                _cache = json.load(f)
+        else:
+            _cache = {}
+            _save_cache()
 
-	return _cache
+    return _cache
 
 #this ensures that cached routes are saved and updated
 def _save_cache():
@@ -50,7 +50,7 @@ def get_eta(start_lat, start_lon, end_lat, end_lon):
     key = _cache_key(start_lat, start_lon, end_lat, end_lon)
     #just ensures api isn't called when ambulance and job are in the same place
     if start_lat == end_lat and start_lon == end_lon:
-	    return 0.0, 0.0
+        return 0.0, 0.0
 
     if key in cache:
         distance_miles, eta_minutes = cache[key]
