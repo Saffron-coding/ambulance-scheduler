@@ -5,3 +5,5 @@ __pycache__/
 instance/
 cache/route_cache.json
 .DS_Store
+supervisor_meeting_log
+.idea/
